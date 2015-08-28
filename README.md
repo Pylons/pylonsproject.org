@@ -1,2 +1,2 @@
-# ppo
-New pylonsproject.org marketing website
+# pylonsproject.org
+Pylons Project Marketing Website
