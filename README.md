@@ -7,6 +7,10 @@ Examples include [Pallets](https://www.palletsprojects.com/) and its projects.
 
 See [Issue #7](https://github.com/Pylons/pylonsproject.org/issues/7) for the proposed structure of this website.
 
+## Demo
+
+A demo is available [here](http://upcoming.pylonsproject.org/) until we deploy as the main site.
+
 ## Environment
 
 At the bare minimum you'll need the following for doing development:
