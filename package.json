@@ -1,7 +1,7 @@
 {
   "name": "pylonsproject.org",
   "description": "pylonsproject.org",
-  "version": "0.2.0-dev",
+  "version": "0.1.1",
   "author": "Pylons Project",
   "license": "MIT",
   "engines": [
