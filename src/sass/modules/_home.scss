@@ -1,0 +1,132 @@
+// Module Home
+
+.home {
+  padding-bottom: $footer-height;
+  margin-top: -90px;
+  h1.title {
+    margin: 0 0 1em 0;
+    font-size: 3em;
+    font-weight: 300;
+  }
+  h2.title {
+    font-weight: 300;
+  }
+  h3.title {
+    margin-top: 0;
+  }
+  .hero-header {
+    padding: $block-padding-ends+35 $block-padding-sides;
+    background-color: $ppo-blue;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 850px;
+    color: lighten($ppo-blue, 40%);
+    a {
+      color: $white;
+    }
+    .tagline {
+      h1, h2 {
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 130%;
+        margin-top: 0;
+        .emphasis {
+          color: $white;
+          font-weight: 400;
+          &.title {
+            font-size: 145%;
+          }
+        }
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+  .section-content {
+    padding: $block-padding-ends $block-padding-sides;
+    ul.features {
+       margin: 0;
+      padding: 10px 20px;
+      li {
+        list-style-type: none;
+        margin: 5px 0;
+        &:before {
+          font-family: 'FontAwesome';
+          content: '\f0da';
+          margin:0 14px 0 -20px;
+          color: $ppo-blue;
+        }
+        &:first-child {
+          margin: 0 0 5px;
+        }
+      }
+    }
+    .icon-block {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .project-items {
+      padding-left: 0;
+      font-size: 14px;
+      .project-item {
+        border: 1px solid $color-light;
+        padding: 10px;
+        margin-bottom: 10px;
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+    &.section-green {
+      background-color: $ppo-green;
+    }
+    &.section-yellow {
+      background-color: $ppo-yellow;
+    }
+    &.section-pyramid {
+      background-color: $ppo-green;
+      color: darken($ppo-green, $darker-percent);
+      position: relative;
+      h1.title {
+        font-size: 4em;
+        color: $white;
+        margin: 0 0 0.5em 0;
+      }
+      h2 {
+        font-weight: 300;
+        strong {
+          font-weight: 400;
+        }
+      }
+      a {
+        color: $white;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        background-image: url('../img/pyramid-green.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 750px;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm-max) {
+  .home {
+    h1.title {
+      &.not-first {
+        margin-top: 1em;
+      }
+    }
+  }
+}

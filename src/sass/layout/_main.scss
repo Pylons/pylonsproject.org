@@ -1,0 +1,42 @@
+// Layout Content
+
+section#main {
+  position: relative;
+  display: block;
+  padding-bottom: $footer-height;
+}
+
+.section-content {
+  padding: $block-padding-ends - 20 $block-padding-sides;
+  ul.features {
+     margin: 0;
+    padding: 10px 20px;
+    li {
+      list-style-type: none;
+      margin: 5px 0;
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f0da';
+        margin:0 14px 0 -20px;
+        color: $ppo-blue;
+      }
+      &:first-child {
+        margin: 0 0 5px;
+      }
+    }
+  }
+  .icon-block {
+    text-align: center;
+    margin-top: 25px;
+  }
+  &.section-gray {
+    background-color: $color-light;
+    ul.features {
+      li {
+        &:before {
+          color: darken($ppo-gray, $dark-percent);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// Colors
+
+// Text Colors
+@include text-shades(primary, $color-primary);
+@include text-shades(success, $color-success);
+@include text-shades(info, $color-info);
+@include text-shades(warning, $color-warning);
+@include text-shades(danger, $color-danger);
+@include text-shades(alert, $color-alert);
+@include text-shades(system, $color-system);
+@include text-shades(dark, $color-dark);
+@include text-shades(light, $color-light);
+
+@include text-shades(blue, $ppo-blue);
+@include text-shades(gray, $ppo-gray);
+@include text-shades(green, $ppo-green);
+@include text-shades(red, $ppo-red);
+@include text-shades(yellow, $ppo-yellow);
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+// Background Colors
+@include bg-shades(primary, $color-primary);
+@include bg-shades(success, $color-success);
+@include bg-shades(info, $color-info);
+@include bg-shades(warning, $color-warning);
+@include bg-shades(danger, $color-danger);
+@include bg-shades(alert, $color-alert);
+@include bg-shades(system, $color-system);
+@include bg-shades(dark, $color-dark);
+@include bg-shades(light, $color-light);
+
+@include bg-shades(blue, $ppo-blue);
+@include bg-shades(gray, $ppo-gray);
+@include bg-shades(green, $ppo-green);
+@include bg-shades(red, $ppo-red);
+@include bg-shades(yellow, $ppo-yellow);
+
+.bg-white {
+  color: $text-color;
+}
+
+.bg-black {
+  color: $white;
+}
