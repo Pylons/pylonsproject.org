@@ -16,6 +16,12 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'colors.json')),
       page: 'colors.html'
+    }, {
+      template: 'src/templates/community-participate.ejs',
+      filename: 'community-participate.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-participate.json')),
+      page: 'community-participate.html'
     }
   ]
 };
