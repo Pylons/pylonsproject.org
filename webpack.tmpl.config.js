@@ -16,6 +16,12 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'colors.json')),
       page: 'colors.html'
+    }, {
+      template: 'src/templates/code-of-conduct.ejs',
+      filename: 'code-of-conduct.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'code-of-conduct.json')),
+      page: 'code-of-conduct.html'
     }
   ]
 };
