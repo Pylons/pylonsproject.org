@@ -34,6 +34,26 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'community-contribute.json')),
       page: 'community-contribute.html'
+    }, {
+      template: 'src/templates/license.ejs',
+      filename: 'license.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'license.json')),
+      page: 'license.html'
+    },
+    {
+      template: 'src/templates/about-pylons.ejs',
+      filename: 'about-pylons.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'about-pylons.json')),
+      page: 'about-pylons.html'
+    },
+    {
+      template: 'src/templates/history.ejs',
+      filename: 'history.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'history.json')),
+      page: 'history.html'
     }
   ]
 };
