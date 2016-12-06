@@ -28,6 +28,12 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'code-of-conduct.json')),
       page: 'code-of-conduct.html'
+    }, {
+      template: 'src/templates/community-contribute.ejs',
+      filename: 'community-contribute.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-contribute.json')),
+      page: 'community-contribute.html'
     }
   ]
 };
