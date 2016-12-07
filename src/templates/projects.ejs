@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-xs-12">
           <h1 class="title text-blue">
-            Our Projects
+            Our <strong>Projects</strong>
           </h1>
         </div>
       </div>
@@ -15,50 +15,31 @@
         <div class="col-md-12">
           <div class="grid community">
             <% context.projects.forEach(function(item){ %>
-              <% if (!item.deprecated) { %>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                  <div class="grid-item-content project-item">
-                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
-                    <p><%= item.description %></p>
-                    <p>
-                      <a href="<%= item.packageUrl %>">package</a> •
-                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
-                      <% if (item.docsUrl != '') { %><a href="<%= item.docsUrl %>">docs</a><% } %><% if (item.websiteUrl != '') { %> •<% } %>
-                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
-                    </p>
-                  </div>
+              <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                <div class="grid-item-content project-item">
+                  <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
+                  <p><%= item.description %></p>
+                  <% if (item.updated_at != -1) { %>
+                  <p class="lastupdated">Last updated: <%= item.updated_at %></p>
+                  <% } %>
+                  <p>
+                    <a href="<%= item.packageUrl %>">package</a> •
+                    <a href="<%= item.sourceUrl %>">source</a> •
+                    <a href="<%= item.docsUrl %>">docs</a><% if (item.websiteUrl != '') { %> •<% } %>
+                    <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
+                  </p>
+                  <% if (item.updated_at != -1) { %>
+                  <p class="stats">
+                    <span class="glyphicon glyphicon-star" aria-hidden="true" title="Number of stargazers"></span> <%= item.stargazers_count %>
+                    <!-- the watchers_count field is currently bugged in the API. 
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true" title="Number of watchers"></span> <%= item.watchers_count %>
+                    --->
+                    <span class="glyphicon glyphicon-random" aria-hidden="true" title="Number of forks"></span> <%= item.forks_count %>
+                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true" title="Number of open issues"></span> <%= item.open_issues_count %>
+                  <p>
+                  <% } %>
                 </div>
-              <% } %>
-            <% }); %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <h2 class="title text-blue">
-            Deprecated / Maintenance Only
-          </h2>
-        </div>
-      </div>
-      <div class="row project-items">
-        <div class="col-md-12">
-          <div class="grid community">
-            <% context.projects.forEach(function(item){ %>
-              <% if (item.deprecated) { %>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                  <div class="grid-item-content project-item">
-                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
-                    <p><%= item.description %></p>
-                    <p>
-                      <a href="<%= item.packageUrl %>">package</a> •
-                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
-                      <% if (item.docsUrl != '') { %><a href="<%= item.docsUrl %>">docs</a><% } %><% if (item.websiteUrl != '') { %> •<% } %>
-                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
-                    </p>
-                  </div>
-                </div>
-              <% } %>
+              </div>
             <% }); %>
           </div>
         </div>

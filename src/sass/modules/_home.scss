@@ -77,8 +77,21 @@
         h4 {
           margin-top: 0;
         }
+        .lastupdated {
+          font-size: smaller;
+        }
+        .stats {
+          font-size: smaller;
+          span {
+            margin: 0 2px 0 10px;
+            &:nth-child(1) {
+              margin-left: 2px;
+            }
+          }
+        }
       }
     }
+
     &.section-green {
       background-color: $ppo-green;
     }
