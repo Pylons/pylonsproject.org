@@ -1,3 +1,21 @@
 .page {
   padding-bottom: $footer-height;
+
+  .section-content {
+    .grid-item {
+      height: 13em;
+    }
+    .project-items {
+      padding-left: 0;
+      font-size: 14px;
+      .project-item {
+        border: 1px solid $color-light;
+        padding: 10px;
+        margin-bottom: 10px;
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }

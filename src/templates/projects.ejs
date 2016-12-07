@@ -1,0 +1,72 @@
+<%- include partials/top %>
+
+<div class="page">
+
+  <section class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title text-blue">
+            Our Projects
+          </h1>
+        </div>
+      </div>
+      <div class="row project-items">
+        <div class="col-md-12">
+          <div class="grid community">
+            <% context.projects.forEach(function(item){ %>
+              <% if (!item.deprecated) { %>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                  <div class="grid-item-content project-item">
+                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
+                    <p><%= item.description %></p>
+                    <p>
+                      <a href="<%= item.packageUrl %>">package</a> •
+                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
+                      <% if (item.docsUrl != '') { %><a href="<%= item.docsUrl %>">docs</a><% } %><% if (item.websiteUrl != '') { %> •<% } %>
+                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
+                    </p>
+                  </div>
+                </div>
+              <% } %>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title text-blue">
+            Deprecated / Maintenance Only
+          </h2>
+        </div>
+      </div>
+      <div class="row project-items">
+        <div class="col-md-12">
+          <div class="grid community">
+            <% context.projects.forEach(function(item){ %>
+              <% if (item.deprecated) { %>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                  <div class="grid-item-content project-item">
+                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
+                    <p><%= item.description %></p>
+                    <p>
+                      <a href="<%= item.packageUrl %>">package</a> •
+                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
+                      <% if (item.docsUrl != '') { %><a href="<%= item.docsUrl %>">docs</a><% } %><% if (item.websiteUrl != '') { %> •<% } %>
+                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
+                    </p>
+                  </div>
+                </div>
+              <% } %>
+            <% }); %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<%- include partials/bottom %>

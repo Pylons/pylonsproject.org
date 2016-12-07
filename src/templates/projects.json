@@ -1,0 +1,157 @@
+{
+  "title": "Projects",
+  "projects": [
+    {
+      "name": "AcidFS",
+      "description": "Filesystem interaction using transactions with ACID semantics.",
+      "packageUrl": "https://pypi.python.org/pypi/acidfs",
+      "sourceUrl": "https://github.com/Pylons/acidfs",
+      "docsUrl": "http://acidfs.readthedocs.io/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Colander",
+      "description": "Serialization, deserialization and validation library.",
+      "packageUrl": "https://pypi.python.org/pypi/colander",
+      "sourceUrl": "https://github.com/Pylons/colander",
+      "docsUrl": "http://docs.pylonsproject.org/projects/colander/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Deform",
+      "description": "An HTML form library.",
+      "packageUrl": "https://pypi.python.org/pypi/deform",
+      "sourceUrl": "https://github.com/Pylons/deform",
+      "docsUrl": "http://docs.pylonsproject.org/projects/deform/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Hupper",
+      "description": "A process monitor for developers that reloads process on file changes.",
+      "packageUrl": "https://pypi.python.org/pypi/hupper",
+      "sourceUrl": "https://github.com/Pylons/hupper",
+      "docsUrl": "http://docs.pylonsproject.org/projects/hupper/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Paginate",
+      "description": "Divides large result sets into pages for easier browsing.",
+      "packageUrl": "https://pypi.python.org/pypi/paginate",
+      "sourceUrl": "https://github.com/Pylons/paginate",
+      "docsUrl": "",
+      "websiteUrl": "",
+      "display_on_index": false,
+      "display_in_nav": false
+    },
+    {
+      "name": "Peppercorn",
+      "description": "A library for converting a token stream into a data structure.",
+      "packageUrl": "https://pypi.python.org/pypi/peppercorn",
+      "sourceUrl": "https://github.com/Pylons/peppercorn",
+      "docsUrl": "http://docs.pylonsproject.org/projects/peppercorn/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": false,
+      "display_in_nav": false
+    },
+    {
+      "name": "Pylons Framework",
+      "description": "A rapid web application development framework. Merged with repoze.bfg into Pyramid, and is now in maintenance-only mode.",
+      "packageUrl": "https://pypi.python.org/pypi/Pylons",
+      "sourceUrl": "https://github.com/Pylons/pylons",
+      "docsUrl": "http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/",
+      "websiteUrl": "http://upcoming.pylonsproject.org/about-pylons-framework.html",
+      "display_on_index": false,
+      "display_in_nav": false,
+      "deprecated": true
+    },
+    {
+      "name": "Pyramid",
+      "description": "The Start Small, Finish Big, Stay Finished Web Framework.",
+      "packageUrl": "https://pypi.python.org/pypi/pyramid",
+      "sourceUrl": "https://github.com/Pylons/pyramid",
+      "docsUrl": "http://docs.pylonsproject.org/projects/pyramid/en/latest/",
+      "websiteUrl": "https://trypyramid.com/",
+      "display_on_index": true,
+      "display_in_nav": true
+    },
+    {
+      "name": "SubstanceD",
+      "description": "An application server based on Pyramid.",
+      "packageUrl": "https://pypi.python.org/pypi/substanced",
+      "sourceUrl": "https://github.com/Pylons/substanced",
+      "docsUrl": "http://docs.pylonsproject.org/projects/substanced/en/latest/",
+      "websiteUrl": "http://www.substanced.net/",
+      "display_on_index": false,
+      "display_in_nav": false
+    },
+    {
+      "name": "Translationstring",
+      "description": "An internationalization library.",
+      "packageUrl": "https://pypi.python.org/pypi/translationstring",
+      "sourceUrl": "https://github.com/Pylons/translationstring",
+      "docsUrl": "http://docs.pylonsproject.org/projects/translationstring/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Venusian",
+      "description": "A library useful for framework authors to defer decorator actions.",
+      "packageUrl": "https://pypi.python.org/pypi/venusian",
+      "sourceUrl": "https://github.com/Pylons/venusian",
+      "docsUrl": "http://docs.pylonsproject.org/projects/venusian/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Waitress",
+      "description": "WSGI server for Python 2/3 that runs on UNIX and Windows.",
+      "packageUrl": "https://pypi.python.org/pypi/waitress",
+      "sourceUrl": "https://github.com/Pylons/waitress",
+      "docsUrl": "http://docs.pylonsproject.org/projects/waitress/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "Webob",
+      "description": "WSGI request/response library.",
+      "packageUrl": "https://pypi.python.org/pypi/webob",
+      "sourceUrl": "https://github.com/Pylons/webob",
+      "docsUrl": "http://docs.webob.org/",
+      "websiteUrl": "http://webob.org/",
+      "display_on_index": true,
+      "display_in_nav": true
+    },
+    {
+      "name": "WebTest",
+      "description": "Wraps any WSGI application and makes it easy to send test requests to that application, without starting up an HTTP server.",
+      "packageUrl": "https://pypi.python.org/pypi/WebTest",
+      "sourceUrl": "https://github.com/Pylons/webtest",
+      "docsUrl": "http://webtest.readthedocs.io/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": true,
+      "display_in_nav": false
+    },
+    {
+      "name": "WebError",
+      "description": "Wraps any WSGI application and makes it easy to send test requests to that application, without starting up an HTTP server.",
+      "packageUrl": "https://pypi.python.org/pypi/WebError",
+      "sourceUrl": "https://github.com/Pylons/weberror",
+      "docsUrl": "",
+      "websiteUrl": "",
+      "display_on_index": false,
+      "display_in_nav": false,
+      "deprecated": true
+    }
+  ]
+}
