@@ -61,6 +61,13 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'support.json')),
       page: 'support.html'
+    },
+    {
+      template: 'src/templates/about-pylons-framework.ejs',
+      filename: 'about-pylons-framework.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'about-pylons-framework.json')),
+      page: 'about-pylons-framework.html'
     }
   ]
 };
