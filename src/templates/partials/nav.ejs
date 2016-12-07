@@ -25,8 +25,10 @@
               Projects <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-right">
-              <li><a href="https://trypyramid.com/">Pyramid</a></li>
-              <li><a href="http://webob.org/">WebOb</a></li>
+              <% options.projects.projects.forEach(function(item){ %>
+                <% if (item.display_in_nav) { %><li><a href="<%= item.websiteUrl %>"><%= item.name %></a></li><% } %>
+              <% }); %>
+              <li><a href="/projects.html">More ...</a></li>
             </ul>
           </li>
           <li class="dropdown">

@@ -30,109 +30,29 @@
         </div>
       </div>
       <div class="row project-items">
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Colander</h4>
-            <p>serialization, deserialization and validation library.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/colander">package</a> •
-              <a href="https://github.com/Pylons/colander">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/colander/en/latest/">docs</a>
-            </p>
+        <div class="col-md-12">
+          <div class="grid community">
+            <% options.projects.projects.forEach(function(item){ %>
+              <% if (item.display_on_index) { %>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                  <div class="grid-item-content project-item">
+                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
+                    <p><%= item.description %></p>
+                    <p>
+                      <a href="<%= item.packageUrl %>">package</a> •
+                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
+                      <a href="<%= item.docsUrl %>">docs</a><% if (item.websiteUrl != '') { %> •<% } %>
+                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
+                    </p>
+                  </div>
+                </div>
+              <% } %>
+            <% }); %>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Deform</h4>
-            <p>an HTML form library.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/deform">package</a> •
-              <a href="https://github.com/Pylons/deform">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/deform/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Hupper</h4>
-            <p>a process monitor for developers that reloads process on file changes.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/hupper">package</a> •
-              <a href="https://github.com/Pylons/hupper">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/hupper/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Peppercorn</h4>
-            <p>a library for converting a token stream into a data structure.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/peppercorn">package</a> •
-              <a href="https://github.com/Pylons/peppercorn">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/peppercorn/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row project-items">
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Pyramid</h4>
-            <p>The Start Small, Finish Big, Stay Finished Web Framework.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/pyramid">package</a> •
-              <a href="https://github.com/Pylons/pyramid">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/pyramid/en/latest/">docs</a> •
-              <a href="https://trypyramid.com">website</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Translationstring</h4>
-            <p>an internationalization library.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/translationstring">package</a> •
-              <a href="https://github.com/Pylons/translationstring">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/translationstring/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Venusian</h4>
-            <p>a library useful for framework authors to defer decorator actions.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/venusian">package</a> •
-              <a href="https://github.com/Pylons/venusian">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/venusian/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Waitress</h4>
-            <p>WSGI server for Python 2/3 that runs on UNIX and Windows.</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/waitress">package</a> •
-              <a href="https://github.com/Pylons/waitress">source</a> •
-              <a href="http://docs.pylonsproject.org/projects/waitress/en/latest/">docs</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row project-items">
-        <div class="col-md-3">
-          <div class="project-item">
-            <h4>Webob</h4>
-            <p>WSGI request/response library</p>
-            <p>
-              <a href="https://pypi.python.org/pypi/webob">package</a> •
-              <a href="https://github.com/Pylons/webob">source</a> •
-              <a href="http://docs.webob.org">docs</a> •
-              <a href="http://webob.org">website</a>
-            </p>
+        <div class="row">
+          <div class="col-md-12 col-md-offset-10">
+            </h3><a href="/projects.html" />More Projects ...</a></h3>
           </div>
         </div>
       </div>
