@@ -77,19 +77,19 @@
         h4 {
           margin-top: 0;
         }
+        .lastupdated {
+          font-size: smaller;
+        }
+        .stats {
+          font-size: smaller;
+          span {
+            margin: 0 2px 0 10px;
+            &:nth-child(1) {
+              margin-left: 2px;
+            }
+          }
+        }
       }
-    }
-    .project-item .lastupdated {
-      font-size: smaller;
-    }
-    .project-item .stats {
-      font-size: smaller;
-    }
-    .project-item .stats span {
-      margin: 0 2px 0 10px;
-    }
-    .project-item .stats span:nth-child(1) {
-      margin-left: 2px;
     }
 
     &.section-green {
