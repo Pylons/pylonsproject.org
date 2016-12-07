@@ -1,0 +1,5 @@
+Q&D python script to update the src/templates/projects.json with fresh data
+from github (last updated, watch count, fork count, issue count, ..)
+
+To be ran from cron about once per day.
+

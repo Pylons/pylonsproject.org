@@ -2,9 +2,6 @@
   padding-bottom: $footer-height;
 
   .section-content {
-    .grid-item {
-      height: 13em;
-    }
     .project-items {
       padding-left: 0;
       font-size: 14px;
@@ -15,6 +12,18 @@
         h4 {
           margin-top: 0;
         }
+      }
+      .project-item .lastupdated {
+        font-size: smaller;
+      }
+      .project-item .stats {
+        font-size: smaller;
+      }
+      .project-item .stats span {
+        margin: 0 2px 0 10px;
+      }
+      .project-item .stats span:nth-child(1) {
+        margin-left: 2px;
       }
     }
   }
