@@ -54,6 +54,13 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'history.json')),
       page: 'history.html'
+    },
+    {
+      template: 'src/templates/support.ejs',
+      filename: 'support.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'support.json')),
+      page: 'support.html'
     }
   ]
 };
