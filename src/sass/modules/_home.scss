@@ -67,18 +67,6 @@
       text-align: center;
       margin-top: 25px;
     }
-    .project-items {
-      padding-left: 0;
-      font-size: 14px;
-      .project-item {
-        border: 1px solid $color-light;
-        padding: 10px;
-        margin-bottom: 10px;
-        h4 {
-          margin-top: 0;
-        }
-      }
-    }
     &.section-green {
       background-color: $ppo-green;
     }
