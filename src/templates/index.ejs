@@ -1,6 +1,6 @@
 <%- include partials/top %>
 
-<div class="home">
+<div class="page home">
 
   <section class="hero-header">
     <div class="container">
@@ -30,26 +30,22 @@
         </div>
       </div>
       <div class="row project-items">
-        <div class="col-md-12">
-          <div class="grid community">
-            <% options.projects.projects.forEach(function(item){ %>
-              <% if (item.display_on_index) { %>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                  <div class="grid-item-content project-item">
-                    <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
-                    <p><%= item.description %></p>
-                    <p>
-                      <a href="<%= item.packageUrl %>">package</a> •
-                      <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
-                      <a href="<%= item.docsUrl %>">docs</a><% if (item.websiteUrl != '') { %> •<% } %>
-                      <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
-                    </p>
-                  </div>
-                </div>
-              <% } %>
-            <% }); %>
-          </div>
-        </div>
+        <% options.projects.projects.forEach(function(item){ %>
+          <% if (item.display_on_index) { %>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="project-item">
+                <h4><% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %><%= item.name %><% if (item.websiteUrl != '') { %></a><% } %></h4>
+                <p class="project-description"><%= item.description %></p>
+                <p class="project-links">
+                  <a href="<%= item.packageUrl %>">package</a> •
+                  <a href="<%= item.sourceUrl %>">source</a><% if (item.docsUrl != '') { %> •<% } %>
+                  <a href="<%= item.docsUrl %>">docs</a><% if (item.websiteUrl != '') { %> •<% } %>
+                  <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>">website</a><% } %>
+                </p>
+              </div>
+            </div>
+          <% } %>
+        <% }); %>
         <div class="row">
           <div class="col-md-12 col-md-offset-10">
             </h3><a href="/projects.html" />More Projects ...</a></h3>
