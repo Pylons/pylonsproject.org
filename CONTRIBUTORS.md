@@ -50,3 +50,4 @@ The below-signed are contributors to a code repository that is part of the proje
 - Blaise Laflamme, 2016/01/04
 - Steve Piercy, 2016/01/04
 - Nejc Zupan, 2016/12/06
+- Jan Likar, 2016/12/08
