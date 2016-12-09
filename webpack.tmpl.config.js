@@ -18,11 +18,11 @@ var config = {
       context: require(path.resolve(baseDir, 'colors.json')),
       page: 'colors.html'
     }, {
-      template: 'src/templates/community-participate.ejs',
-      filename: 'community-participate.html',
+      template: 'src/templates/community-how-to-participate.ejs',
+      filename: 'community-how-to-participate.html',
       uglify: true,
-      context: require(path.resolve(baseDir, 'community-participate.json')),
-      page: 'community-participate.html'
+      context: require(path.resolve(baseDir, 'community-how-to-participate.json')),
+      page: 'community-how-to-participate.html'
     }, {
       template: 'src/templates/code-of-conduct.ejs',
       filename: 'code-of-conduct.html',
@@ -30,11 +30,11 @@ var config = {
       context: require(path.resolve(baseDir, 'code-of-conduct.json')),
       page: 'code-of-conduct.html'
     }, {
-      template: 'src/templates/community-contribute.ejs',
-      filename: 'community-contribute.html',
+      template: 'src/templates/community-how-to-contribute.ejs',
+      filename: 'community-how-to-contribute.html',
       uglify: true,
-      context: require(path.resolve(baseDir, 'community-contribute.json')),
-      page: 'community-contribute.html'
+      context: require(path.resolve(baseDir, 'community-how-to-contribute.json')),
+      page: 'community-how-to-contribute.html'
     }, {
       template: 'src/templates/license.ejs',
       filename: 'license.html',
@@ -50,11 +50,11 @@ var config = {
       page: 'about-pylons-project.html'
     },
     {
-      template: 'src/templates/support.ejs',
-      filename: 'support.html',
+      template: 'src/templates/community-support.ejs',
+      filename: 'community-support.html',
       uglify: true,
-      context: require(path.resolve(baseDir, 'support.json')),
-      page: 'support.html'
+      context: require(path.resolve(baseDir, 'community-support.json')),
+      page: 'community-support.html'
     },
     {
       template: 'src/templates/about-pylons-framework.ejs',
