@@ -56,14 +56,6 @@ var config = {
       page: 'about-pylons-project.html'
     },
     {
-      template: 'src/templates/history.ejs',
-      filename: 'history.html',
-      uglify: true,
-      context: require(path.resolve(baseDir, 'history.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
-      page: 'history.html'
-    },
-    {
       template: 'src/templates/support.ejs',
       filename: 'support.html',
       uglify: true,
