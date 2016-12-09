@@ -20,16 +20,8 @@
           <li>
             <a href="/">Home</a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Projects <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right">
-              <% options.projects.projects.forEach(function(item){ %>
-                <% if (item.display_in_nav) { %><li><a href="<%= item.websiteUrl %>"><%= item.name %></a></li><% } %>
-              <% }); %>
-              <li><a href="/projects.html">More ...</a></li>
-            </ul>
+          <li>
+            <a href="/projects.html">Projects</a>
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">

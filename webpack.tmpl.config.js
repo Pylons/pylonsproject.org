@@ -16,35 +16,30 @@ var config = {
       filename: 'colors.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'colors.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'colors.html'
     }, {
       template: 'src/templates/community-participate.ejs',
       filename: 'community-participate.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'community-participate.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'community-participate.html'
     }, {
       template: 'src/templates/code-of-conduct.ejs',
       filename: 'code-of-conduct.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'code-of-conduct.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'code-of-conduct.html'
     }, {
       template: 'src/templates/community-contribute.ejs',
       filename: 'community-contribute.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'community-contribute.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'community-contribute.html'
     }, {
       template: 'src/templates/license.ejs',
       filename: 'license.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'license.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'license.html'
     },
     {
@@ -52,7 +47,6 @@ var config = {
       filename: 'about-pylons-project.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'about-pylons-project.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'about-pylons-project.html'
     },
     {
@@ -60,7 +54,6 @@ var config = {
       filename: 'support.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'support.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'support.html'
     },
     {
@@ -68,7 +61,6 @@ var config = {
       filename: 'about-pylons-framework.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'about-pylons-framework.json')),
-      projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'about-pylons-framework.html'
     },
     {
