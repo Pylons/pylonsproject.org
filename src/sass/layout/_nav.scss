@@ -11,8 +11,8 @@ nav#nav {
     .navbar {
       padding: 15px 0;
       color: $white;
-      background-color: $tpc-transparent;
-      border: 1px solid $tpc-transparent;
+      background-color: $ppo-transparent;
+      border: 1px solid $ppo-transparent;
       .navbar-brand, .navbar-brand-name {
         opacity: 0;
         @include transition(0);
