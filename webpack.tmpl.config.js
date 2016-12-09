@@ -48,12 +48,12 @@ var config = {
       page: 'license.html'
     },
     {
-      template: 'src/templates/about-pylons.ejs',
-      filename: 'about-pylons.html',
+      template: 'src/templates/about-pylons-project.ejs',
+      filename: 'about-pylons-project.html',
       uglify: true,
-      context: require(path.resolve(baseDir, 'about-pylons.json')),
+      context: require(path.resolve(baseDir, 'about-pylons-project.json')),
       projects: require(path.resolve(baseDir, 'projects.json')),
-      page: 'about-pylons.html'
+      page: 'about-pylons-project.html'
     },
     {
       template: 'src/templates/history.ejs',
