@@ -67,7 +67,7 @@
       "packageUrl": "https://pypi.python.org/pypi/Pylons",
       "sourceUrl": "https://github.com/Pylons/pylons",
       "docsUrl": "http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/",
-      "websiteUrl": "http://upcoming.pylonsproject.org/about-pylons-framework.html",
+      "websiteUrl": "http://pylonsproject.org/about-pylons-framework.html",
       "display_on_index": false,
       "display_in_nav": false,
       "deprecated": true
