@@ -52,3 +52,4 @@ The below-signed are contributors to a code repository that is part of the proje
 - Nejc Zupan, 2016/12/06
 - Jan Likar, 2016/12/08
 - Svintsov Dmitry, 2016/12/19
+- Mohamed Akram, 2017/01/11
