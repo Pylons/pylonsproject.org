@@ -1,15 +1,5 @@
 # pylonsproject.org
-The future home of the Pylons Project marketing website.
-
-This website shall describe the Pylons Project organization and its projects.
-
-Examples include [Pallets](https://www.palletsprojects.com/) and its projects.
-
-See [Issue #7](https://github.com/Pylons/pylonsproject.org/issues/7) for the proposed structure of this website.
-
-## Demo
-
-A demo is available [here](http://upcoming.pylonsproject.org/) until we deploy as the main site.
+The home of the Pylons Project marketing website, describing the organization and its projects.
 
 ## Environment
 
