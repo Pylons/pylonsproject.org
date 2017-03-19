@@ -5,11 +5,13 @@
     .grid-item {
       height: 10em;
     }
-    .project-items {
+    .project-items, .sponsor-items {
       padding-left: 0;
       font-size: 14px;
       .project-item {
         border: 1px solid $color-light;
+      }
+      .project-item, .sponsor-item {
         padding: 10px;
         margin-bottom: 10px;
         h4 {
