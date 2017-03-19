@@ -19,7 +19,7 @@
     ga('create', 'UA-21146943-1', 'auto');
     ga('send', 'pageview');
   </script>
-<link href="vendors.c8e23a2de330481ae483.css" rel="stylesheet"><link href="app.c8e23a2de330481ae483.css" rel="stylesheet"></head>
+<link href="vendors.e38d85d789a3351c06f0.css" rel="stylesheet"><link href="app.e38d85d789a3351c06f0.css" rel="stylesheet"></head>
 <body>
   <div id="pace-loader"></div>
   <section class="app">
@@ -57,6 +57,7 @@
               <li><a href="/community-how-to-contribute.html">How to Contribute</a></li>
               <li><a href="/community-support.html">Support</a></li>
               <li><a href="/code-of-conduct.html">Code of Conduct</a></li>
+              <li><a href="/community-sponsors.html">Sponsors</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -66,6 +67,7 @@
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a href="/about-pylons-project.html">Pylons Project</a></li>
               <li><a href="/about-pylons-framework.html">Pylons Framework (deprecated)</a></li>
+              <li><a href="/about-contact.html">Contact</a></li>
               <li><a href="/license.html">License</a></li>
             </ul>
           </li>
@@ -85,26 +87,26 @@
       <div class="col-lg-10 col-lg-offset-1">
         <h1 class="title text-blue">How to Participate</h1>
         <p>
-          Most interaction with the Pylons Project is done via <a href="https://github.com/Pylons">The Pylons GitHub organization</a>, via the <a href="https://groups.google.com/forum/#!forum/pylons-devel">pylons-devel mailing list</a>, or via the <a href="https://webchat.freenode.net/?channels=%23pyramid">#pyramid</a> IRC channel on <a href="http://freenode.net/">FreeNode</a>.
+          Most interaction with the Pylons Project is done via the <a href="https://github.com/Pylons">Pylons organization on GitHub</a>, the <a href="https://groups.google.com/forum/#!forum/pylons-discuss">pylons-discuss mailing list</a>, or the <a href="https://webchat.freenode.net/?channels=%23pyramid">#pyramid</a> IRC channel on <a href="https://freenode.net/">FreeNode</a>.
         </p>
         <h3>Reporting a Bug</h3>
         <p>
-          When reporting a bug, be as thorough as possible.  Including additional detail is encouraged.  Bugs with a Pylons Project package should be reported to the individual issue tracker on GitHub.
+          When reporting a bug, be as thorough as possible.  Including additional detail is encouraged.  Bugs with a Pylons Project package should be reported in its issue tracker on GitHub.
         </p>
         <span id="create-a-github-account" />
         <h4>1. Create a GitHub account</h4>
         <p>
-          You will need to <a href="https://github.com/signup/free">create a GitHub account</a> account to report the bug.
+          You will need to <a href="https://github.com/join">create a GitHub account</a> to report the bug.
         </p>
         <span id="determine-if-your-bug-is-really-a-bug" />
         <h4>2. Determine if your bug is really a bug</h4>
         <p>You should not file a bug if you are:</p>
         <ul>
           <li>
-            Proposing features and ideas: you should provide a pull request or send email to the <a href="https://groups.google.com/forum/#!forum/pylons-devel">mailing list</a>.
+            Proposing features and ideas. Instead you should provide a pull request or send email to the <a href="https://groups.google.com/forum/#!forum/pylons-discuss">mailing list</a>.
           </li>
           <li>
-            Requesting support: there are a variety of ways to request support, from the <a href="https://groups.google.com/forum/#!forum/pylons-devel">mailing list</a>, <a href="https://stackoverflow.com/questions/tagged/pyramid">Stackoverflow</a>, or <a href="https://webchat.freenode.net/?channels=%23pyramid">#pyramid</a> IRC channel on <a href="http://freenode.net/">FreeNode</a>.
+            Requesting support: there are a variety of ways to request support, from the <a href="https://groups.google.com/forum/#!forum/pylons-discuss">mailing list</a>, <a href="https://stackoverflow.com/questions/tagged/pyramid">Stackoverflow</a>, or <a href="https://webchat.freenode.net/?channels=%23pyramid">#pyramid</a> IRC channel on <a href="https://freenode.net/">FreeNode</a>.
           </li>
         </ul>
         <span id="make-sure-your-bug-hasn-t-already-been-reported" />
@@ -118,36 +120,35 @@
           To provide the developers with enough information to fix a bug, they'll need to be able to easily repeat the conditions and observe it themselves. The likelihood that a bug will be fixed is directly correlated to the developer's ability to create the conditions under which the bug may be observed.
         </p>
         <p>
-          Often a bug report should include a Python traceback (<a href="http://pastebin.com/TyaPKpt9">see a Python traceback</a>). We will also need to know what platform you're running (Windows, macOS, Linux), and which Python interpreter you're running if its not CPython (e.g., Jython, Google App Engine).
+          Often a bug report should include a Python traceback (<a href="http://pastebin.com/TyaPKpt9">see a Python traceback</a>). We will also need to know what platform you're running (Windows, macOS, Linux), and which Python interpreter you're running if it is not CPython (for example, Jython or Google App Engine).
         </p>
         <span id="submit-the-bug" />
         <h4>5. Submit the bug</h4>
         <p>
-          By default GitHub will email you to let you know when new comments have been made on your bug report. In the event you've turned this feature off, you should check back on occasion to ensure you don't miss any questions a developer trying to fix the bug might ask.
+          By default GitHub will email you to let you know when new comments have been made on your bug report. If you turned off this feature, you should check on occasion to ensure you do not miss any questions a developer might ask.
         </p>
         <span id="issue-trackers" />
         <h3>Issue Trackers</h3>
         <p>
-          Bugs are reported and tracked via GitHub's issue trackers. Each Pylons Project has its own issue tracker:
+          Bugs for each Pylons Project package are reported and tracked in their own GitHub issue tracker:
         </p>
         <ul>
-          <li><a href="https://github.com/Pylons/pyramid/issues">Pyramid issue tracker</a></li>
-          <li><a href="https://github.com/Pylons/pyramid_beaker/issues">pyramid_beaker issue tracker</a></li>
-          <li><a href="https://github.com/Pylons/pyramid_xmlrpc/issues">pyramid_xmlrpc issue tracker</a></li>
-          <li><a href="https://github.com/Pylons/pyramid_jinja2/issues">pyramid_jinja2 issue tracker</a></li>
-          <li><a href="https://github.com/Pylons/pylonsproject.org/issues">PylonsProject.org issue tracker</a> (All bugs with the pylonsproject.org website should be reported here.)
+          <li><a href="https://github.com/Pylons/pyramid/issues">Pyramid</a></li>
+          <li><a href="https://github.com/Pylons/waitress/issues">waitress</a></li>
+          <li><a href="https://github.com/Pylons/webob/issues">WebOb</a></li>
+          <li><a href="https://github.com/Pylons/colander/issues">colander</a></li>
+          <li><a href="https://github.com/Pylons/deform/issues">deform</a></li>
+          <li><a href="https://github.com/Pylons/webtest/issues">webtest</a></li>
+          <li><a href="https://github.com/Pylons/pylonsproject.org/issues">PylonsProject.org</a> (this website)
           </li>
         </ul>
         <p>
-          Additional projects follow the same pattern: <pre>https://github.com/Pylons/&lt;projectname&gt;/issues</pre>
+          Other projects not listed follow the pattern: <pre>https://github.com/Pylons/&lt;projectname&gt;/issues</pre>
         </p>
         <span id="working-on-code" />
         <h3>Working on Code</h3>
         <p>
-          To fix bugs or add features to a package managed by the Pylons project, an account on GitHub is required. All Pylons Project packages are under the <a href="https://github.com/Pylons">Pylons organization on github</a>.
-        </p>
-        <p>
-          The general practice for contributing new features and bug fixes is to <a href="https://help.github.com/articles/fork-a-repo/">fork the package</a> and make changes within a checkout of the forked repository. Then send a <a href="https://help.github.com/articles/creating-a-pull-request/">pull request</a>. This allows the developers to review the patches and accept them, or comment on what needs to be addressed before the change sets can be accepted.
+          To contribute new features and bug fixes, <a href="https://help.github.com/articles/fork-a-repo/">fork the package</a> and make changes within a checkout of the forked repository. Then send a <a href="https://help.github.com/articles/creating-a-pull-request/">pull request</a>. This allows the developers to review the patches and accept them, or comment on what needs to be addressed before the change sets can be accepted.
         </p>
       </div>
     </div>
@@ -160,9 +161,18 @@
   <div class="container">
     <div class="row">
       <p>
-        © Copyright 2008-2017, <a href="http://agendaless.com/"><strong>Agendaless Consulting</strong></a>
+        <a href="https://twitter.com/PylonsProject"
+    class="twitter-follow-button"
+    data-size="large"
+    data-lang="en"
+    data-dnt="true"
+    data-show-count="true">Follow @PylonsProject</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+      <p>
+        © Copyright 2008-2017, <a href="https://agendaless.com/"><strong>Agendaless Consulting</strong></a>
         <br/>
-        <a href="http://www.pylonsproject.org/"><strong>Pylons Project</strong></a> | Build c8e23a2de330481ae483
+        <a href="http://pylonsproject.org/"><strong>Pylons Project</strong></a> | Build e38d85d789a3351c06f0
       </p>
       <p>
         <a href="https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship" target="_blank">
@@ -175,7 +185,7 @@
 
   </section>
   
-<script type="text/javascript" src="vendors.c8e23a2de330481ae483.js"></script><script type="text/javascript" src="app.c8e23a2de330481ae483.js"></script></body>
+<script type="text/javascript" src="vendors.e38d85d789a3351c06f0.js"></script><script type="text/javascript" src="app.e38d85d789a3351c06f0.js"></script></body>
 </html>
 
 
