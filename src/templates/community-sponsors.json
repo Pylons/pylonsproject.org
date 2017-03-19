@@ -3,7 +3,7 @@
   "sponsors": [
     {
       "name": "Linode",
-      "description": "Linode provides hosting for Pylons Project websites, including this website and TryPyramid.com.",
+      "description": "Linode provides DNS and web hosting services for Pylons Project websites, including <a href='/'>PylonsProject.org</a> and <a href='https://trypyramid.com/'>TryPyramid.com</a>.",
       "logo": "logo-linode.png",
       "websiteUrl": "https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship"
     }, {
