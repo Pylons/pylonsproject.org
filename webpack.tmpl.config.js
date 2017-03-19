@@ -47,6 +47,7 @@ var config = {
       filename: 'community-sponsors.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'community-sponsors.json')),
+      sponsors: require(path.resolve(baseDir, 'community-sponsors.json')),
       page: 'community-sponsors.html'
     }, {
       template: 'src/templates/about-pylons-project.ejs',

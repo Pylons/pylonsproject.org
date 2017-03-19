@@ -5,9 +5,30 @@
     <div class="container">
       <div class="col-lg-10 col-lg-offset-1">
         <h1 class="title text-blue">Sponsors</h1>
-         <section id="using-support">
-          <h3>Using Support Wisely</h3>
-          <p>After exhausing these avenues, it's completely appropriate to ask a question on the pylons-discuss mail list or #pyramid and #pylons IRC channels. When you ask your question, please describe what you've learned from the efforts above, as it will help the developers focus on answering your question quickly. It also helps tremendously if you are able to provide a code or configuration snippet that makes the problem easily repeatable.</p>
+         <section id="sponsors">
+          <h3>We are grateful for the support from our sponsors</h3>
+
+      <div class="row sponsor-items">
+        <% context.sponsors.forEach(function(item){ %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="sponsor-item">
+                <h4>
+                    <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %>
+                    <%= item.name %>
+                    <% if (item.websiteUrl != '') { %></a><% } %>
+                  <% if (item.logo != '') { %>
+                    <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %>
+                    <img src="img/<%= item.logo %>" class="pull-right">
+                    <% if (item.websiteUrl != '') { %></a><% } %>
+                  <% } %>
+                </h4>
+                <p class="sponsor-description"><%- item.description %></p>
+              </div>
+            </div>
+        <% }); %>
+      </div>
+
+
         </section>
       </div>
     </div>
