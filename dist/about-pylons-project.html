@@ -19,7 +19,7 @@
     ga('create', 'UA-21146943-1', 'auto');
     ga('send', 'pageview');
   </script>
-<link href="vendors.c8e23a2de330481ae483.css" rel="stylesheet"><link href="app.c8e23a2de330481ae483.css" rel="stylesheet"></head>
+<link href="vendors.e38d85d789a3351c06f0.css" rel="stylesheet"><link href="app.e38d85d789a3351c06f0.css" rel="stylesheet"></head>
 <body>
   <div id="pace-loader"></div>
   <section class="app">
@@ -57,6 +57,7 @@
               <li><a href="/community-how-to-contribute.html">How to Contribute</a></li>
               <li><a href="/community-support.html">Support</a></li>
               <li><a href="/code-of-conduct.html">Code of Conduct</a></li>
+              <li><a href="/community-sponsors.html">Sponsors</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -66,6 +67,7 @@
             <ul class="dropdown-menu dropdown-menu-right">
               <li><a href="/about-pylons-project.html">Pylons Project</a></li>
               <li><a href="/about-pylons-framework.html">Pylons Framework (deprecated)</a></li>
+              <li><a href="/about-contact.html">Contact</a></li>
               <li><a href="/license.html">License</a></li>
             </ul>
           </li>
@@ -83,12 +85,62 @@
     <div class="container">
       <div class="col-lg-10 col-lg-offset-1">
         <h1 class="title text-blue">About Pylons Project</h1>
-          <p>
-            The Pylons Project is composed of a disparate group of project leaders with experience going back to the very start of Python web frameworks. Collectively, we have experience and humility gained by making (and surviving) every stupid decision that could be imagined. We aim to bring fresh ideas to classic web development problems.
-          </p>
-          <p>
-            Rather than focusing on a single web framework, the Pylons Project will develop a collection of related technologies. The first package from the Pylons Project was the Pyramid web framework. Other packages have been added to the collection over time, including higher-level components and applications. We hope to evolve the project into an ecosystem of well-tested, well-documented components which interoperate easily.
-          </p>
+          <p>The Pylons Project is composed of a disparate group of project leaders with experience going back to the very start of Python web frameworks.</p>
+          <p>Collectively, we have experience and humility gained by making (and surviving) every stupid decision that could be imagined. We aim to bring fresh ideas to classic web development problems.</p>
+
+          <h2 class="title text-blue">Pylons Project frequently asked questions</h2>
+          <div id="how-does-the-pylons-project-relate-to-pylons-the-web-framework">
+            <h3>How does the Pylons Project relate to the Pylons web framework?</h3>
+            <p>The Pylons Project was founded by the people behind the Pylons web framework to develop web application framework technology in Python. Rather than focusing on a single web framework, the Pylons Project develops a collection of related technologies.</p>
+            <p>The first package from the Pylons Project was the <a href="https://trypyramid.com/">Pyramid web framework</a>.</p>
+            <p>Other packages have been added to the collection over time, including higher-level components and applications. The project has become an ecosystem of well-tested, well-documented components which interoperate easily.</p>
+            <p>The name "Pylons Project" was chosen to reflect the shared core ethos with the Pylons web framework: an overall effort combining the best parts from different projects.</p>
+          </div>
+          <div id="why-not-just-continue-developing-the-pylons-1-0-code-base">
+            <h3>Why not just continue developing the Pylons 1.0 code-base?</h3>
+            <p>Unfortunately, the Pylons 1.0 code-base hit a point of diminishing returns in flexibility and extendability. Due to the use of <a class="reference external" href="https://be.groovie.org/2010/10/19/why_extending_through_subclassing_a_frameworks.html">sub-classing</a>, extensive and sometimes confusing use of Stacked Object Proxy globals, and issues with configuration organization, attempts to refactor or redesign the existing Pylons framework core weren't working out.</p>
+            <p>Over the course of several months, serious attempts were made to rewrite sections of the Pylons framework core. After realizing that Pylons users would have to put in extensive effort to port their existing applications, and that Pylons 2 was looking more and more like repoze.bfg, continued development seemed a waste of development effort.</p>
+            <p>Ben Bangert started collaborating with Chris McDonough to bring the repoze.bfg routes functionality up to par with the stand-alone <a class="reference external" href="http://routes.readthedocs.io/en/latest/">Routes</a> project. Further development showed that the two projects had much in common, and the developers shifted from building Pylons 2 on top of BFG and towards a full merger.</p>
+          </div>
+          <div id="what-does-the-pylons-project-mean-for-pylons-the-web-framework">
+            <h3>What does the Pylons Project mean for the Pylons web framework?</h3>
+            <p>The Pylons web framework 1.x line will continue to be maintained, though not enhanced. We will provide a package that allows Pylons 1.x applications and Pyramid applications to run in the same interpreter. The future of Pylons-style web application development is <a href="https://trypyramid.com/">Pyramid</a>.</p>
+          </div>
+          <div id="what-does-the-pylons-project-mean-for-repoze-bfg">
+            <h3>What does the Pylons Project mean for repoze.bfg?</h3>
+            <p>The Pyramid codebase is derived almost entirely from repoze.bfg. Some changes have been made for the sake of Pylons compatibility, but those used to development with repoze.bfg will find Pyramid very familiar. By merging repoze.bfg with the philosophically-similar Pylons framework, both gain a dramatically expanded audience.</p>
+          </div>
+          <div id="what-does-this-mean-for-the-repoze-project">
+            <h3>What does this mean for the Repoze project?</h3>
+            <p>The Repoze project will continue to exist. Repoze will be able to regain its original focus: bringing Zope technologies to WSGI. The popularity of BFG as its own web framework hindered this goal.</p>
+          </div>
+          <div id="why-should-i-care-about-the-pylons-project">
+            <h3>Why should I care about the Pylons Project?</h3>
+            <p>This really is a good question. We hope that people are attracted at first by the spirit of the thing. It takes humility to sacrifice a little sovereignty and work together. The opposite—forking or splintering of projects—is much more common in the open source world. We feel there is a limited amount of oxygen in the space of "top-tier Python web frameworks" and we don't do the Python community a service by over-crowding.</p>
+            <p>We are a group of project leaders with experience going back to the start of Python web frameworks. We aim to bring fresh ideas to classic problems. We hope to combine a lot of hard-earned maturity into the development of a secure choice that developers and companies can bet on. Couple this with the humility and irreverence gained by surviving every stupid decision that could be imagined, and you've got a good basis for a team of developers.</p>
+          </div>
+          <div id="why-is-the-pylons-project-different-than-other-projects">
+            <h3>Why is the Pylons Project different than other projects?</h3>
+            <p>Our mantra is: "Small, Documented, Tested, Extensible, Fast, Stable, Friendly". Everything we do, from Pyramid to the batteries we want to develop for later "batteries-included" projects, should retain these qualities.</p>
+          </div>
+          <div id="what-do-you-mean-by-friendly">
+          <h3>What do you mean by "Friendly"?</h3>
+            <p>All of us have been around the block a few times. We've seen good communities and bad communities, effective communities and dysfunctional communities, arrogant ones and irreverent ones. We pride ourselves on constructive listening, telling the truth even when it makes us look bad, admitting when we're wrong, and attracting lots of people who actually like to help.</p>
+          </div>
+          <div id="what-does-the-pylons-project-mean-for-zope-and-plone">
+          <h3>What does the Pylons Project mean for Zope and Plone?</h3>
+            <p>The repoze.bfg people came from the world of Zope and Plone. Paul Everitt, for example, was a co-founder of Zope and was at the first Python conference at NIST. Zope was a tremendous success in the first cycle, with some truly fresh ideas and a large commercial ecosystem. Plone continued that in a second cycle, with an even larger ecosystem and an obvious, out-of-the-box value proposition.</p>
+            <p>Since then, the cycle has moved on and focus has shifted to other projects. We love our Zope roots, the experience we gained helping establish the Zope Foundation and the Plone Foundation, and consulting experience we have on very large projects. But we want to take these experiences and start fresh together with Pylons, one of the clear winners of the last cycle, to work on something for the next cycle.</p>
+            <p>If you're doing Zope and Plone and have a project that fits their bulls-eye, use them. If you have something that could use those ideas for an alternate need, keep an eye on what we're doing.</p>
+          </div>
+          <div id="how-do-i-participate">
+            <h3>How do I participate?</h3>
+            <p>See <a href="/community-how-to-participate.html">How to Participate</a>.</p>
+          </div>
+          <div id="where-is-the-code">
+            <h3>Where is the code?</h3>
+            <p>Code for the Pylons Project is hosted under the organization named <a href="https://github.com/Pylons">Pylons on GitHub</a>.</p>
+          </div>
       </div>
     </div>
   </section>
@@ -99,9 +151,18 @@
   <div class="container">
     <div class="row">
       <p>
-        © Copyright 2008-2017, <a href="http://agendaless.com/"><strong>Agendaless Consulting</strong></a>
+        <a href="https://twitter.com/PylonsProject"
+    class="twitter-follow-button"
+    data-size="large"
+    data-lang="en"
+    data-dnt="true"
+    data-show-count="true">Follow @PylonsProject</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+      <p>
+        © Copyright 2008-2017, <a href="https://agendaless.com/"><strong>Agendaless Consulting</strong></a>
         <br/>
-        <a href="http://www.pylonsproject.org/"><strong>Pylons Project</strong></a> | Build c8e23a2de330481ae483
+        <a href="http://pylonsproject.org/"><strong>Pylons Project</strong></a> | Build e38d85d789a3351c06f0
       </p>
       <p>
         <a href="https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship" target="_blank">
@@ -114,6 +175,6 @@
 
   </section>
   
-<script type="text/javascript" src="vendors.c8e23a2de330481ae483.js"></script><script type="text/javascript" src="app.c8e23a2de330481ae483.js"></script></body>
+<script type="text/javascript" src="vendors.e38d85d789a3351c06f0.js"></script><script type="text/javascript" src="app.e38d85d789a3351c06f0.js"></script></body>
 </html>
 
