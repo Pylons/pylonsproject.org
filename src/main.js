@@ -5,6 +5,8 @@ require('./img/pylons-60x60.png');
 require('./img/pylons-16x16.png');
 require('./img/linode.png');
 require('./img/pyramid-green.png');
+require('./img/logo-jetbrains.png');
+require('./img/logo-linode.png');
 
 var hljs = require('highlight.js');
 

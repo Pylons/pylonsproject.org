@@ -1,0 +1,21 @@
+{
+  "title": "Sponsors",
+  "sponsors": [
+    {
+      "name": "Linode",
+      "description": "Linode provides hosting for Pylons Project websites, including this website and TryPyramid.com.",
+      "logo": "logo-linode.png",
+      "websiteUrl": "https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship"
+    }, {
+      "name": "Rackspace",
+      "description": "Rackspace provides email hosting for the Pylons Project.",
+      "logo": "",
+      "websiteUrl": "https://www.rackspace.com/"
+    }, {
+      "name": "JetBrains",
+      "description": "Core developers in any project under the Pylons Project are eligible to receive a renewable one-year free and open source software license for all JetBrains products, including PyCharm, at no cost. Contact user <code>stevepiercy</code> in the <code>#pyramid</code> IRC channel on <code>irc.freenode.net</code>.",
+      "logo": "logo-jetbrains.png",
+      "websiteUrl": "https://www.jetbrains.com/"
+    }
+  ]
+}
