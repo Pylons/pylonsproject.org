@@ -62,6 +62,12 @@ var config = {
       context: require(path.resolve(baseDir, 'about-pylons-framework.json')),
       page: 'about-pylons-framework.html'
     }, {
+      template: 'src/templates/about-contact.ejs',
+      filename: 'about-contact.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'about-contact.json')),
+      page: 'about-contact.html'
+    }, {
       template: 'src/templates/license.ejs',
       filename: 'license.html',
       uglify: true,
