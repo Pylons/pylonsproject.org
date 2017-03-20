@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit testing guidelines | Pylons Project</title>
+  <meta name="description" content="The Pylons Project Organization develops web application framework technology in Python. This site provides an easy entry point into Pylons Project Organization projects.">
+  <meta name="keywords" content="pyramid, web framework, python web framework, pyramid web framework, python, pylons, pylons project, open source">
+  <meta name="author" content="Pylons Project">
+  <link rel="shortcut icon" href="img/pylons-16x16.png"/>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-21146943-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+<link href="vendors.e38d85d789a3351c06f0.css" rel="stylesheet"><link href="app.e38d85d789a3351c06f0.css" rel="stylesheet"></head>
+<body>
+  <div id="pace-loader"></div>
+  <section class="app">
+    <nav id="nav" >
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img class="logo" alt="pylons project" src="img/pylons-60x60.png"/>
+        </a>
+        <div class="navbar-brand-name">
+          Pylons&nbsp;Project
+        </div>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav nav-pills pull-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/projects.html">Projects</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Community <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="/community-how-to-participate.html">How to Participate</a></li>
+              <li><a href="/community-how-to-contribute.html">How to Contribute</a></li>
+              <li><a href="/community-coding-style-standards.html">Code Style / Standards</a></li>
+              <li><a href="/community-unit-testing-guidelines.html">Testing Guidelines</a></li>
+              <li><a href="/community-code-of-conduct.html">Code of Conduct</a></li>
+              <li><a href="/community-support.html">Support</a></li>
+              <li><a href="/community-sponsors.html">Sponsors</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              About <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="/about-pylons-project.html">Pylons Project</a></li>
+              <li><a href="/about-pylons-framework.html">Pylons Framework (deprecated)</a></li>
+              <li><a href="/about-contact.html">Contact</a></li>
+              <li><a href="/license.html">License</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <div id="main">
+
+
+<div class="page">
+
+  <section class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h1 class="title text-blue">Unit testing guidelines</h1>
+
+            <p>The Pylons Project rather rigorously follows a unit testing dogma along the lines described by Tres Seaver in <a href="https://palladion.com//home/tseaver/obzervationz/2008/unit_testing_notes-20080724">Avoiding Temptation: Notes on using unittest effectively</a>. This document is based upon that article.</p>
+            <p class="alert alert-info">This document deals almost exclusively with unit tests. We have no particular dogma for integration tests or functional tests, although many of the tips below can be reused in that context.</p>
+            <h2>Tips for Avoiding Bad Unit Tests</h2>
+            <ul>
+                <li>Some folks have drunk the "don't repeat yourself" KoolAid. We agree that not repeating code is a virtue in most cases, but unit test code is an exception. Cleverness in a test both obscures the intent of the test and makes a subsequent failure massively harder to diagnose.</li>
+                <li>Others want to avoid writing both tests and documentation: they try to write test cases (almost invariably as "doctests") which do the work of real tests, while at the same time trying to make "readable" docs.</li>
+            </ul>
+            <p>Most of the issues involved with the first motive are satisfactorily addressed later in this document. Refusing to share code between test modules makes most temptations to cleverness go away. Where the temptation remains, the cure is to look at an individual test and ask the following questions:</p>
+
+            <ul>
+                <li>Is the intent of the test clearly explained by the name of the testcase?</li>
+                <li>Does the test follow the "canonical" form for a unit test? In other words, does it:
+                    <ul>
+                        <li>set up the preconditions for the method/function being tested,</li>
+                        <li>call the method/function exactly one time, passing in the values established in the first step.</li>
+                        <li>make assertions about the return value, and/or any side effects.</li>
+                        <li>do absolutely nothing else.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Fixing tests which fail along the "don't repeat yourself" axis is usually straightforward:</p>
+            <ul>
+                <li>Replace any "generic" setup code with per-test-case code. The classic case here is code in the <code>setUp</code> method which stores values on the self of the test case class. Such code is always capable of refactoring to use helper methods which return the appropriately-configured test objects on a per-test basis.</li>
+                <li>If the method/function under test is called more than once, clone (and rename appropriately) the test case method, removing any redundant setup/assertions, until each test case calls it exactly once.</li>
+            </ul>
+            <p>Rewriting tests to conform to this pattern has a number of benefits:</p>
+            <ul>
+                <li>Each individual test case specifies exactly one code path through the method/function being tested, which means that achieving "100% coverage" means you really did test it all.</li>
+                <li>The set of test cases for the method/function being tested define the contract very clearly: any ambiguity can be solved by adding one or more additional tests.</li>
+                <li>Any test which fails is going to be easier to diagnose, because the combination of its name, its preconditions, and its expected results are going to be clearly focused.</li>
+            </ul>
+
+            <h2>Goals</h2>
+
+            <p>The goals of the kind of testing outlined here are simplicity, loose or no coupling, and speed:</p>
+            <ul>
+                <li>Tests should be as simple as possible, while exercising the application-under-test (AUT) completely.</li>
+                <li>Tests should run as quickly as possible, to encourage running them frequently.</li>
+                <li>Tests should avoid coupling with other tests, or with parts of the AUT which they are not responsible for testing.</li>
+            </ul>
+            <p>Developers write such tests to verify that the AUT is abiding by the contracts the developer specifies. While an instance of this type of test case may be illustrative of the contract it tests, such test cases do not take the place of either API documentation or of narrative "theory of operations" documentation. Still less are they intended for end-user documentation.</p>
+
+            <h2>Rule: Avoid doctests</h2>
+
+            <p>Doctests seem to fulfill the best of both worlds, providing documentation and testing. In reality, tests written using doctest almost always serve as both poor tests and poor documentation.</p>
+
+            <ul>
+                <li>Good tests often need to test obscure edge cases, and tests for obscure edge cases don't make particularly good reading as documentation.</li>
+                <li>Doctests are harder to debug than "normal" unit tests. It's easy to "pdb" step through a normal unit test, whereas it's much harder to do so for doctests.</li>
+                <li>Doctests expose too many implementation details of the interpreter (such as the representation format of a class when printed). Often doctests break when interpreter versions change, and the ameliorations that allow doctests to straddle representations between versions then cause the doctest to become ugly and fragile.</li>
+                <li>Doctests have an execution model that makes it difficult to follow many of the rest of the rules in this document.</li>
+                <li>Doctests often encourage bad testing practice (cutting an unverified outcome of a function call and pasting it into a test suite).</li>
+            </ul>
+
+            <h2>Rule: Never import the module-under-test at test module scope</h2>
+
+            <p>Import failures in the module-under-test (MUT) should cause individual test cases to fail, and they should never prevent those tests from being run. Depending on the test runner, import problems may be much harder to distinguish at a glance than normal test failures.</p>
+            <p>For example, rather than the following:</p>
+
+            <p><pre class="nobs">
+              <code class="python"># test the foo module
+import unittest
+
+from package.foo import FooClass
+
+class FooClassTests(unittest.TestCase):
+
+    def test_bar(self):
+        foo = FooClass('Bar')
+        self.assertEqual(foo.bar(), 'Bar')</code>
+            </pre></p>
+            <p>prefer:</p>
+
+
+            <p><pre class="nobs">
+              <code class="python"># test the foo module
+import unittest
+
+class FooClassTests(unittest.TestCase):
+
+    def _getTargetClass(self):
+        from package.foo import FooClass
+        return FooClass
+
+    def _makeOne(self, *args, **kw):
+        return self._getTargetClass()(*args, **kw)
+
+    def test_bar(self):
+        foo = self._makeOne('Bar')
+        self.assertEqual(foo.bar(), 'Bar')</code>
+            </pre></p>
+
+            <h2>Guideline: Minimize module-scope dependencies</h2>
+            <p>Unit tests need to be runnable even in an environment which is missing some required features. In that case, one or more of the test case methods (TCMs) will fail. Defer imports of any needed library modules as late as possible.</p>
+            <p>For instance, this example generates no test failures at all if the <code>qux</code> module is not importable:</p>
+
+<p><pre class="nobs">
+              <code class="python"># test the foo module
+import unittest
+import qux
+
+class FooClassTests(unittest.TestCase):
+
+    def _getTargetClass(self):
+        from package.foo import FooClass
+        return FooClass
+
+    def _makeOne(self, *args, **kw):
+        return self._getTargetClass()(*args, **kw)
+
+    def test_bar(self):
+        foo = self._makeOne(qux.Qux('Bar'))</code>
+            </pre></p>
+
+            <p>while this example raises failures for each TCM which uses the missing module:</p>
+
+            <p><pre class="nobs">
+              <code class="python"># test the foo module
+import unittest
+
+class FooClassTests(unittest.TestCase):
+
+    def _getTargetClass(self):
+        from package.foo import FooClass
+        return FooClass
+
+    def _makeOne(self, *args, **kw):
+        return self._getTargetClass()(*args, **kw)
+
+    def test_bar(self):
+        import qux
+        foo = self._makeOne(qux.Qux('Bar'))</code>
+            </pre></p>
+            <p>It may be a reasonable trade off in some cases to import a module (but not the MUT!) which is used widely within the test cases. Such a trade off should probably occur late in the life of the TCM, after the pattern of usage is clearly understood.</p>
+
+            <h2>Rule: Make each test case method test Just One Thing</h2>
+            <p>Avoid the temptation to write fewer, bigger tests. Ideally, each TCM will exercise one set of preconditions for one method or function. For instance, the following test case tries to exercise far too much:</p>
+
+            <p><pre class="nobs">
+              <code class="python">def test_bound_used_container(self):
+    from AccessControl.SecurityManagement import newSecurityManager
+    from AccessControl import Unauthorized
+    newSecurityManager(None, UnderprivilegedUser())
+    root = self._makeTree()
+    guarded = root._getOb('guarded')
+
+    ps = guarded._getOb('bound_used_container_ps')
+    self.assertRaises(Unauthorized, ps)
+
+    ps = guarded._getOb('container_str_ps')
+    self.assertRaises(Unauthorized, ps)
+
+    ps = guarded._getOb('container_ps')
+    container = ps()
+    self.assertRaises(Unauthorized, container)
+    self.assertRaises(Unauthorized, container.index_html)
+    try:
+        str(container)
+    except Unauthorized:
+        pass
+    else:
+        self.fail("str(container) didn't raise Unauthorized!")
+
+    ps = guarded._getOb('bound_used_container_ps')
+    ps._proxy_roles = ( 'Manager', )
+    ps()
+
+    ps = guarded._getOb('container_str_ps')
+    ps._proxy_roles = ( 'Manager', )
+    ps()</code>
+            </pre></p>
+
+            <p>This test has a couple of faults, but the critical one is that it tests too many things (eight different cases).</p>
+            <p>In general, the prolog of the TCM should establish the one set of preconditions by setting up fixtures/mock objects/static values, and then instantiate the class or import the FUT (function-under-test). The TCM should then call the method/function. The epilog should test the outcomes, typically by examining either the return value or the state of one or more fixtures/mock objects.</p>
+            <p>Thinking about the separate sets of preconditions for each function or method being tested helps clarify the contract, and may inspire a simpler, cleaner, faster implementation.</p>
+
+            <h2>Rule: Name TCMs to indicate what they test</h2>
+
+            <p>The name of the test should be the first, most useful clue when looking at a failure report. Don't make the reader (yourself, most likely) grep the test module to figure out what was being tested.</p>
+            <p>Rather than adding a comment:</p>
+
+            <p><pre class="nobs">
+              <code class="python">class FooClassTests(unittest.TestCase):
+
+   def test_some_random_blather(self):
+       # test the 'bar' method in the case where 'baz' is not set.
+       ...</code>
+            </pre></p>
+
+            <p>prefer to use the TCM name to indicate its purpose:</p>
+
+            <p><pre class="nobs">
+              <code class="python">class FooClassTests(unittest.TestCase):
+
+   def test_getBar_wo_baz(self):
+       ...</code>
+            </pre></p>
+
+            <h2>Guideline: Share setup via helper methods, not via attributes of self</h2>
+            <p>Doing unneeded work in the setUp method of a test case class sharply increases coupling between TCMs, which is a Bad Thing™. For instance, suppose the class-under-test (CUT) takes a context as an argument to its constructor. Rather than instantiating the context in <code>setUp</code>:</p>
+
+            <p><pre class="nobs">
+              <code class="python">class FooClassTests(unittest.TestCase):
+
+   def setUp(self):
+       self.context = DummyContext()
+
+  # ...
+
+   def test_bar(self):
+       foo = self._makeOne(self.context)</code>
+            </pre></p>
+
+            <p>add a helper method to instantiate the context, and keep it as a local:</p>
+
+            <p><pre class="nobs">
+              <code class="python">class FooClassTests(unittest.TestCase):
+
+   def _makeContext(self, *args, **kw):
+       return DummyContext(*args, **kw)
+
+   def test_bar(self):
+       context = self._makeContext()
+       foo = self._makeOne(context)</code>
+            </pre></p>
+            <p>This practice allows different tests to create the mock context differently, avoiding coupling. It also makes the tests run faster, as the tests which don't need the context don't pay for creating it.</p>
+
+            <h2>Guideline: Make fixtures as simple as possible</h2>
+
+            <p>When writing a mock object, start off with an empty class, for example:</p>
+            <p><pre class="nobs">
+              <code class="python">class DummyContext:
+    pass</code>
+            </pre></p>
+
+            <p>Run the tests, adding methods only enough to the mock object to make the dependent tests pass. Avoid giving the mock object any behavior which is not necessary to make one or more tests pass.</p>
+
+            <h2>Guideline: Use hooks and registries judiciously</h2>
+
+            <p>If the application already allows registering plugins or components, take advantage of the fact to insert your mock objects. Don't forget to clean up after each test!</p>
+            <p>It may be acceptable to add hook methods to the application, purely to allow for simplicity of testing. For instance, code which normally sets datetime attributes to "now" could be tweaked to use a module-scope function, rather than calling <code>datetime.now()</code> directly. Tests can then replace that function with one which returns a known value (as long as they put back the original version after they run).</p>
+
+            <h2>Guideline: Use mock objects to clarify dependent contracts</h2>
+
+            <p>Keeping the contracts on which the AUT depends as simple as possible makes the AUT easier to write, and more resilient to changes. Writing mock objects which supply only the simplest possible implementation of such contracts keeps the AUT from acquiring "dependency creep."</p>
+            <p>For example, in a relational application, the SQL queries used by the application can be mocked up as a dummy implementation which takes keyword parameters and returns lists of dictionaries:</p>
+            <p><pre class="nobs">
+              <code class="python">class DummySQL:
+
+    def __init__(self, results):
+        # results should be a list of lists of dictionaries
+        self.called_with = []
+        self.results = results
+
+    def __call__(self, **kw):
+        self.called_with.append(kw.copy())
+        return results.pop(0)</code>
+            </pre></p>
+            <p>In addition to keeping the dependent contract simple (in this case, the SQL object should return a list of mappings, one per row), the mock object allows for easy testing of how it is used by the AUT:</p>
+            <p><pre class="nobs">
+              <code class="python">class FooTest(unittest.TestCase):
+
+   def test_barflies_returns_names_from_SQL(self):
+       from foo.sqlregistry import registerSQL
+       RESULTS = [[{'name': 'Chuck', 'drink': 'Guiness'},
+                   {'name': 'Bob', 'drink': 'Knob Creek'},
+                  ]]
+       query = DummySQL(RESULTS[:])
+       registerSQL('list_barflies', query)
+       foo = self._makeOne('Dog and Whistle')
+
+       names = foo.barflies()
+
+       self.assertEqual(len(names), len(RESULTS))
+       self.failUnless('NAME1' in names)
+       self.failUnless('NAME2' in names)
+
+       self.assertEqual(query.called_with, [{'bar': 'Dog and Whistle'}])</code>
+            </pre></p>
+
+            <h2>Rule: Don't share text fixtures between test modules</h2>
+            <p>The temptation here is to save typing by borrowing mock objects or fixture code from another test module. Once indulged, one often ends up moving such "generic" fixtures to shared modules.</p>
+            <p>The rationale for this prohibition is simplicity. Unit tests need to exercise the AUT, while remaining as clear and simple as possible.</p>
+            <ul>
+                <li>Because they are not in the module which uses them, shared mock objects and fixtures impose a lookup burden on the reader.</li>
+                <li>Because they have to support APIs used by multiple clients, shared fixtures tend to grow APIs and data structures needed only by one client. In the degenerate case, they become as complicated as the application they are supposed to stand in for!</li>
+            </ul>
+
+            <p>In some cases, it may be cleaner to avoid sharing fixtures even among test case methods (TCMs) within the same module or class.</p>
+
+            <h2>Conclusion</h2>
+
+            <p>Tests which conform to these rules and guidelines have the following properties:</p>
+
+            <ul>
+                <li>The tests are straightforward to write.</li>
+                <li>The tests yield excellent coverage of the AUT.</li>
+                <li>They reward the developer through predictable feedback (for example, the growing list of dots for passed tests).</li>
+                <li>They run quickly, and thus encourage the developer to run them frequently.</li>
+                <li>Expected failures confirm missing or incomplete implementations.</li>
+                <li>Unexpected failures are easy to diagnose and repair.</li>
+                <li>When used as regression tests, failures help pinpoint the exact source of the regression (a changed contract, for instance, or an underspecified constraint).</li>
+                <li>Writing such tests clarifies thinking about the contracts of the code they test, as well as the dependencies of that code.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+    </div>
+    <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <p>
+        <a href="https://twitter.com/PylonsProject"
+    class="twitter-follow-button"
+    data-size="large"
+    data-lang="en"
+    data-dnt="true"
+    data-show-count="true">Follow @PylonsProject</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+      <p>
+        © Copyright 2008-2017, <a href="https://agendaless.com/"><strong>Agendaless Consulting</strong></a>
+        <br/>
+        <a href="http://pylonsproject.org/"><strong>Pylons Project</strong></a> | Build e38d85d789a3351c06f0
+      </p>
+      <p>
+        <a href="https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship" target="_blank">
+          Sponsored by <strong>Linode</strong>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </section>
+  
+<script type="text/javascript" src="vendors.e38d85d789a3351c06f0.js"></script><script type="text/javascript" src="app.e38d85d789a3351c06f0.js"></script></body>
+</html>
+
+

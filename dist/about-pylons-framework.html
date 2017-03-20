@@ -56,6 +56,7 @@
               <li><a href="/community-how-to-participate.html">How to Participate</a></li>
               <li><a href="/community-how-to-contribute.html">How to Contribute</a></li>
               <li><a href="/community-coding-style-standards.html">Code Style / Standards</a></li>
+              <li><a href="/community-unit-testing-guidelines.html">Testing Guidelines</a></li>
               <li><a href="/community-code-of-conduct.html">Code of Conduct</a></li>
               <li><a href="/community-support.html">Support</a></li>
               <li><a href="/community-sponsors.html">Sponsors</a></li>
@@ -84,49 +85,51 @@
 <div class="page">
   <section class="section-content">
     <div class="container">
-      <div class="col-lg-10 col-lg-offset-1">
-        <h1 class="title text-blue">About the Pylons web framework</h1>
-        <p>Pylons 1.0 is a lightweight web framework emphasizing flexibility and rapid development.</p>
-        <p>Pylons combines the very best ideas from the worlds of Ruby, Python, and Perl, providing a structured but extremely flexible Python web framework. It's also one of the first projects to leverage the emerging WSGI standard, which allows extensive re-use and flexibility, but only if you need it. Out of the box, Pylons aims to make web development fast, flexible, and easy.</p>
-        <section id="maintenance-only">
-          <h3>Maintenance-only mode</h3>
-          <p>The Pylons web framework has merged with repoze.bfg into <a href="https://trypyramid.com/">Pyramid</a>, and is now in maintenance-only mode. You may submit a <a href="https://github.com/Pylons/pylons/pulls">pull request</a> or <a href="https://github.com/Pylons/pylons/issues">issue</a>, then respectfully request of the maintainers to accept it and make a release.</p>
-          <p>It's highly recommended that new projects start with the new merged web framework, <a href="https://trypyramid.com/">Pyramid</a>.</p>
-        </section>
-        <h2 class="title text-blue">History of Pylons Framework</h2>
-        <p>
-          Pylons initially started, and referred to, just the Pylons Framework before the merger that resulted in the Pylons Project. The below timeline starts with the Pylons Framework, providing the background for how the Pylons Project came to be, how the developers ended up merging their efforts, and the origin projects. Some background is also provided on the other frameworks that merged to form the Pylons Project.
-        </p>
-        <section id="pylons-0-8-2005-2006">
-          <h3>Pylons 0.8 (2005 - 2006)</h3>
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h1 class="title text-blue">About the Pylons web framework</h1>
+          <p>Pylons 1.0 is a lightweight web framework emphasizing flexibility and rapid development.</p>
+          <p>Pylons combines the very best ideas from the worlds of Ruby, Python, and Perl, providing a structured but extremely flexible Python web framework. It's also one of the first projects to leverage the emerging WSGI standard, which allows extensive re-use and flexibility, but only if you need it. Out of the box, Pylons aims to make web development fast, flexible, and easy.</p>
+          <section id="maintenance-only">
+            <h3>Maintenance-only mode</h3>
+            <p>The Pylons web framework has merged with repoze.bfg into <a href="https://trypyramid.com/">Pyramid</a>, and is now in maintenance-only mode. You may submit a <a href="https://github.com/Pylons/pylons/pulls">pull request</a> or <a href="https://github.com/Pylons/pylons/issues">issue</a>, then respectfully request of the maintainers to accept it and make a release.</p>
+            <p>It's highly recommended that new projects start with the new merged web framework, <a href="https://trypyramid.com/">Pyramid</a>.</p>
+          </section>
+          <h2 class="title text-blue">History of Pylons Framework</h2>
           <p>
-            Pylons was developed at a time when many Python frameworks (30+ of them) were vying for users. Ben Bangert noticed that another Python framework, Bricks, had a similar goal and merged development efforts with James Gardner to work on the web development framework that became Pylons.
+            Pylons initially started, and referred to, just the Pylons Framework before the merger that resulted in the Pylons Project. The below timeline starts with the Pylons Framework, providing the background for how the Pylons Project came to be, how the developers ended up merging their efforts, and the origin projects. Some background is also provided on the other frameworks that merged to form the Pylons Project.
           </p>
-          <p>
-            Pylons first came into existence in September, 2005. Initially it was a customization of the Myghty Python Templating Framework, utilizing page handler customization to provide a MVC oriented web framework. Rather than running under mod_python as was common for Myghty, Pylons ran using Myghty's WSGI handler under Paste.
-          </p>
-          <p>
-            Unlike most other Python frameworks at the time, Pylons focused heavily on utilizing the WSGI specification for a flexible component based approach to a web application stack. Session handling, caching, the default templating language, and the request/response objects were all handled by Myghty, while Paste was used to load and run the application, and Routes was created to handle URL dispatching and generation. Around this time, Phil Jenvey joined the development team and began working actively on Pylons.
-          </p>
-        </section>
-        <section id="pylons-0-9-0-9-7-2006-2009">
-          <h3>Pylons 0.9 - 0.9.7 (2006 - 2009)</h3>
-          <p>
-            Pylons 0.9 was released during O'Reilly's 2006 OSCON and brought some major changes to the internal architecture.
-          </p>
-          <p>
-            Running as a Myghty page handler customization became a less than optimal design decision, and Pylons 0.9 made a clear break by running entirely as a WSGI application that then used Myghty as needed for templates only. Session handling and caching were handled by a new third party package called Beaker that was based on the caching/session handling subsystem used by Myghty. Request and response objects were provided by light-weight WSGI wrappers in Paste, which was also still used to run and load the web application
-          </p>
-          <p>
-            During the development of the 0.9 series, several features of Paste were extracted into smaller, more focused packages. The testing suite became WebTest, the WSGI wrappers became WebOb, and the interactive debugging environment became WebError. Pylons 0.9 follows these developments by switching from using Paste to the new packages which provide more functionality with little to no backwards incompatibility issues.
-          </p>
-        </section>
-        <section id="pylons-1-0-2010-present">
-          <h3>Pylons 1.0 (2010-present)</h3>
-          <p>
-            Pylons 1.0 is a polished release of the Pylons framework, and is now in maintenance-only mode.
-          </p>
-        </section>
+          <section id="pylons-0-8-2005-2006">
+            <h3>Pylons 0.8 (2005 - 2006)</h3>
+            <p>
+              Pylons was developed at a time when many Python frameworks (30+ of them) were vying for users. Ben Bangert noticed that another Python framework, Bricks, had a similar goal and merged development efforts with James Gardner to work on the web development framework that became Pylons.
+            </p>
+            <p>
+              Pylons first came into existence in September, 2005. Initially it was a customization of the Myghty Python Templating Framework, utilizing page handler customization to provide a MVC oriented web framework. Rather than running under mod_python as was common for Myghty, Pylons ran using Myghty's WSGI handler under Paste.
+            </p>
+            <p>
+              Unlike most other Python frameworks at the time, Pylons focused heavily on utilizing the WSGI specification for a flexible component based approach to a web application stack. Session handling, caching, the default templating language, and the request/response objects were all handled by Myghty, while Paste was used to load and run the application, and Routes was created to handle URL dispatching and generation. Around this time, Phil Jenvey joined the development team and began working actively on Pylons.
+            </p>
+          </section>
+          <section id="pylons-0-9-0-9-7-2006-2009">
+            <h3>Pylons 0.9 - 0.9.7 (2006 - 2009)</h3>
+            <p>
+              Pylons 0.9 was released during O'Reilly's 2006 OSCON and brought some major changes to the internal architecture.
+            </p>
+            <p>
+              Running as a Myghty page handler customization became a less than optimal design decision, and Pylons 0.9 made a clear break by running entirely as a WSGI application that then used Myghty as needed for templates only. Session handling and caching were handled by a new third party package called Beaker that was based on the caching/session handling subsystem used by Myghty. Request and response objects were provided by light-weight WSGI wrappers in Paste, which was also still used to run and load the web application
+            </p>
+            <p>
+              During the development of the 0.9 series, several features of Paste were extracted into smaller, more focused packages. The testing suite became WebTest, the WSGI wrappers became WebOb, and the interactive debugging environment became WebError. Pylons 0.9 follows these developments by switching from using Paste to the new packages which provide more functionality with little to no backwards incompatibility issues.
+            </p>
+          </section>
+          <section id="pylons-1-0-2010-present">
+            <h3>Pylons 1.0 (2010-present)</h3>
+            <p>
+              Pylons 1.0 is a polished release of the Pylons framework, and is now in maintenance-only mode.
+            </p>
+          </section>
+        </div>
       </div>
     </div>
   </section>
