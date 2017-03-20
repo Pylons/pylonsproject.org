@@ -31,17 +31,17 @@ var config = {
       context: require(path.resolve(baseDir, 'community-how-to-contribute.json')),
       page: 'community-how-to-contribute.html'
     }, {
-      template: 'src/templates/community-support.ejs',
-      filename: 'community-support.html',
-      uglify: true,
-      context: require(path.resolve(baseDir, 'community-support.json')),
-      page: 'community-support.html'
-    }, {
       template: 'src/templates/community-code-of-conduct.ejs',
       filename: 'community-code-of-conduct.html',
       uglify: true,
       context: require(path.resolve(baseDir, 'community-code-of-conduct.json')),
       page: 'community-code-of-conduct.html'
+    }, {
+      template: 'src/templates/community-support.ejs',
+      filename: 'community-support.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-support.json')),
+      page: 'community-support.html'
     }, {
       template: 'src/templates/community-sponsors.ejs',
       filename: 'community-sponsors.html',
