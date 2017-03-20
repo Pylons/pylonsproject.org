@@ -37,6 +37,12 @@ var config = {
       context: require(path.resolve(baseDir, 'community-coding-style-standards.json')),
       page: 'community-coding-style-standards.html'
     }, {
+      template: 'src/templates/community-unit-testing-guidelines.ejs',
+      filename: 'community-unit-testing-guidelines.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-unit-testing-guidelines.json')),
+      page: 'community-unit-testing-guidelines.html'
+    }, {
       template: 'src/templates/community-code-of-conduct.ejs',
       filename: 'community-code-of-conduct.html',
       uglify: true,
