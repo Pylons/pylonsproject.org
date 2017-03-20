@@ -8,7 +8,7 @@
       "websiteUrl": "https://www.linode.com/?utm_source=referral&utm_medium=website&utm_content=[Pyramid]&utm_campaign=sponsorship"
     }, {
       "name": "JetBrains",
-      "description": "Core developers in any project under the Pylons Project are eligible to receive a renewable one-year free and open source software license for all JetBrains products, including PyCharm, at no cost. Contact user <code>stevepiercy</code> in the <code>#pyramid</code> IRC channel on <code>irc.freenode.net</code>.",
+      "description": "Core developers in any project under the Pylons Project are eligible to receive a renewable one-year free and open source software license for all JetBrains products, including <a href='https://www.jetbrains.com/pycharm/'>PyCharm</a>, at no cost. Contact user <code>stevepiercy</code> in the <code>#pyramid</code> IRC channel on <code>irc.freenode.net</code>.",
       "logo": "logo-jetbrains.png",
       "websiteUrl": "https://www.jetbrains.com/"
     }
