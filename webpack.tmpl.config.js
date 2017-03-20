@@ -31,6 +31,12 @@ var config = {
       context: require(path.resolve(baseDir, 'community-how-to-contribute.json')),
       page: 'community-how-to-contribute.html'
     }, {
+      template: 'src/templates/community-coding-style-standards.ejs',
+      filename: 'community-coding-style-standards.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-coding-style-standards.json')),
+      page: 'community-coding-style-standards.html'
+    }, {
       template: 'src/templates/community-code-of-conduct.ejs',
       filename: 'community-code-of-conduct.html',
       uglify: true,
