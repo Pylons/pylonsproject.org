@@ -37,11 +37,11 @@ var config = {
       context: require(path.resolve(baseDir, 'community-support.json')),
       page: 'community-support.html'
     }, {
-      template: 'src/templates/code-of-conduct.ejs',
-      filename: 'code-of-conduct.html',
+      template: 'src/templates/community-code-of-conduct.ejs',
+      filename: 'community-code-of-conduct.html',
       uglify: true,
-      context: require(path.resolve(baseDir, 'code-of-conduct.json')),
-      page: 'code-of-conduct.html'
+      context: require(path.resolve(baseDir, 'community-code-of-conduct.json')),
+      page: 'community-code-of-conduct.html'
     }, {
       template: 'src/templates/community-sponsors.ejs',
       filename: 'community-sponsors.html',
