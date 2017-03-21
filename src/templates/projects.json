@@ -93,7 +93,7 @@
       "display_in_nav": true
     },
     {
-      "name": "Translationstring",
+      "name": "translationstring",
       "description": "An internationalization library.",
       "packageUrl": "https://pypi.python.org/pypi/translationstring",
       "sourceUrl": "https://github.com/Pylons/translationstring",
