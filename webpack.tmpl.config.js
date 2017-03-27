@@ -19,6 +19,12 @@ var config = {
       projects: require(path.resolve(baseDir, 'projects.json')),
       page: 'projects.html'
     }, {
+      template: 'src/templates/community-support.ejs',
+      filename: 'community-support.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'community-support.json')),
+      page: 'community-support.html'
+    }, {
       template: 'src/templates/community-how-to-participate.ejs',
       filename: 'community-how-to-participate.html',
       uglify: true,
@@ -49,12 +55,6 @@ var config = {
       context: require(path.resolve(baseDir, 'community-code-of-conduct.json')),
       page: 'community-code-of-conduct.html'
     }, {
-      template: 'src/templates/community-support.ejs',
-      filename: 'community-support.html',
-      uglify: true,
-      context: require(path.resolve(baseDir, 'community-support.json')),
-      page: 'community-support.html'
-    }, {
       template: 'src/templates/community-sponsors.ejs',
       filename: 'community-sponsors.html',
       uglify: true,
@@ -79,6 +79,12 @@ var config = {
       uglify: true,
       context: require(path.resolve(baseDir, 'about-contact.json')),
       page: 'about-contact.html'
+    }, {
+      template: 'src/templates/about-artwork.ejs',
+      filename: 'about-artwork.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'about-artwork.json')),
+      page: 'about-artwork.html'
     }, {
       template: 'src/templates/license.ejs',
       filename: 'license.html',
