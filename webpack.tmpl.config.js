@@ -80,6 +80,12 @@ var config = {
       context: require(path.resolve(baseDir, 'about-contact.json')),
       page: 'about-contact.html'
     }, {
+      template: 'src/templates/about-artwork.ejs',
+      filename: 'about-artwork.html',
+      uglify: true,
+      context: require(path.resolve(baseDir, 'about-artwork.json')),
+      page: 'about-artwork.html'
+    }, {
       template: 'src/templates/license.ejs',
       filename: 'license.html',
       uglify: true,

@@ -8,6 +8,19 @@ require('./img/pyramid-green.png');
 require('./img/logo-jetbrains.png');
 require('./img/logo-linode.png');
 
+// artwork
+require('./img/pylons-project-logo.svg');
+require('./img/pylons-project-logo.png');
+require('./img/pylons-project-logo.pdf');
+
+require('./img/pylons-project-logo-white.svg');
+require('./img/pylons-project-logo-white.png');
+require('./img/pylons-project-logo-white.pdf');
+
+require('./img/pylons-project-logo-black.svg');
+require('./img/pylons-project-logo-black.png');
+require('./img/pylons-project-logo-black.pdf');
+
 var hljs = require('highlight.js');
 
 hljs.initHighlightingOnLoad();
