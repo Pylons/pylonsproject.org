@@ -62,6 +62,16 @@
       "display_in_nav": false
     },
     {
+      "name": "Plaster",
+      "description": "A configuration loader interface around multiple file formats.",
+      "packageUrl": "https://pypi.python.org/pypi/plaster",
+      "sourceUrl": "https://github.com/Pylons/plaster",
+      "docsUrl": "http://docs.pylonsproject.org/projects/plaster/en/latest/",
+      "websiteUrl": "",
+      "display_on_index": false,
+      "display_in_nav": false
+    },
+    {
       "name": "Pylons Framework",
       "description": "A rapid web application development framework. Superceeded by Pyramid and now in maintenance-only mode.",
       "packageUrl": "https://pypi.python.org/pypi/Pylons",
