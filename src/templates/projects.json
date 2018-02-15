@@ -73,7 +73,7 @@
     },
     {
       "name": "Pylons Framework",
-      "description": "A rapid web application development framework. Superceeded by Pyramid and now in maintenance-only mode.",
+      "description": "A rapid web application development framework. Superseded by Pyramid and now in maintenance-only mode.",
       "packageUrl": "https://pypi.python.org/pypi/Pylons",
       "sourceUrl": "https://github.com/Pylons/pylons",
       "docsUrl": "http://docs.pylonsproject.org/projects/pylons-webframework/en/latest/",
