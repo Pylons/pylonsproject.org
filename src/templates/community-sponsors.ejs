@@ -1,5 +1,4 @@
 <%- include partials/top %>
-
 <div class="page">
   <section class="section-content">
     <div class="container">
@@ -7,28 +6,35 @@
         <div class="col-lg-10 col-lg-offset-1">
           <h1 class="title text-blue">Sponsors</h1>
           <section id="sponsors">
-            <h3>We are grateful for the support from our sponsors</h3>
-            <p>The Pylons Project receives support in the form of services, software, goods, and financial contributions. Open source software faces challenges of sustainability. Individual members of the Pylons Project donate their expertise and time receiving little or no remuneration. Sometimes a gracious gesture or simple "thank you" rewards the developers by letting them know that you appreciate their efforts.</p>
+            <h2>We are grateful for the support from our sponsors</h2>
+            <p>The Pylons Project receives support in the form of services, software, goods, and financial contributions. Open source software faces challenges of sustainability. Individual members of and contributors to the Pylons Project donate their expertise and time receiving little or no remuneration. Sometimes a gracious gesture or simple "thank you" rewards the developers by letting them know that you appreciate their efforts.</p>
             <p>We express special thanks to the following sponsors for their commitment to open source software and the Pylons Project. We encourage your patronization of our sponsors.</p>
             <div class="row sponsor-items">
-            <% context.sponsors.forEach(function(item){ %>
+              <% context.sponsors.forEach(function(item){ %>
                 <div class="col-xs-12 col-sm-6">
                   <div class="sponsor-item">
                     <h4>
-                        <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %>
+                      <% if (item.websiteUrl != '') { %>
+                      <a href="<%= item.websiteUrl %>">
+                        <% } %>
                         <%= item.name %>
-                        <% if (item.websiteUrl != '') { %></a><% } %>
+                        <% if (item.websiteUrl != '') { %>
+                      </a>
+                      <% } %>
                       <% if (item.logo != '') { %>
-                        <% if (item.websiteUrl != '') { %><a href="<%= item.websiteUrl %>"><% } %>
-                        <img src="img/<%= item.logo %>" class="pull-right">
-                        <% if (item.websiteUrl != '') { %></a><% } %>
+                        <% if (item.websiteUrl != '') { %>
+                        <a href="<%= item.websiteUrl %>">
+                          <% } %>
+                          <img src="img/<%= item.logo %>" class="pull-right" width="128" height="128">
+                          <% if (item.websiteUrl != '') { %>
+                        </a><% } %>
                       <% } %>
                     </h4>
                     <p class="sponsor-description"><%- item.description %></p>
                   </div>
                 </div>
-            <% }); %>
-          </div>
+              <% }); %>
+            </div>
           </section>
         </div>
       </div>

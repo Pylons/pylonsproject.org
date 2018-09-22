@@ -8,6 +8,7 @@ require('./img/pyramid-green.png');
 require('./img/logo-talk-python-training-128x128.png');
 require('./img/logo-jetbrains.png');
 require('./img/logo-linode.png');
+require('./img/read-the-docs-logo.svg');
 
 // artwork
 require('./img/pylons-project-logo.svg');
