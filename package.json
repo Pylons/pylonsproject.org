@@ -46,7 +46,7 @@
     "url-loader": "^0.5.9",
     "webpack": "^1.15.0",
     "webpack-dev-middleware": "^1.12.2",
-    "webpack-dev-server": "^1.16.5",
+    "webpack-dev-server": "^3.1.11",
     "webpack-hot-middleware": "^2.21.0",
     "webpack-notifier": "^1.5.1",
     "webpack-stats-plugin": "0.1.4"
