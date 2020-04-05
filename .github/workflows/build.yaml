@@ -10,7 +10,7 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        name: "Build the trypyramid.com website"
+        name: "Build the website"
         steps:
             - uses: actions/checkout@master
             - name: Setup Node.js
