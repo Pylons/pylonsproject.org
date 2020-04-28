@@ -1,0 +1,8 @@
+description: An application server based on Pyramid.
+display_in_nav: true
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/substanced/en/latest/
+name: SubstanceD
+packageUrl: https://pypi.org/project/substanced
+sourceUrl: https://github.com/Pylons/substanced
+websiteUrl: http://www.substanced.net/

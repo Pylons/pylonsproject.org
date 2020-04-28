@@ -1,0 +1,10 @@
+deprecated: true
+description: A rapid web application development framework. Superseded by Pyramid
+  and now in maintenance-only mode.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/pylons-webframework/en/latest/
+name: Pylons Framework
+packageUrl: https://pypi.org/project/Pylons
+sourceUrl: https://github.com/Pylons/pylons
+websiteUrl: https://pylonsproject.org/about-pylons-framework.html

@@ -1,0 +1,8 @@
+description: A configuration loader interface around multiple file formats.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/plaster/en/latest/
+name: Plaster
+packageUrl: https://pypi.org/project/plaster
+sourceUrl: https://github.com/Pylons/plaster
+websiteUrl: ''

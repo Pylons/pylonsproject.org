@@ -1,0 +1,8 @@
+description: Filesystem interaction using transactions with ACID semantics.
+display_in_nav: false
+display_on_index: true
+docsUrl: https://acidfs.readthedocs.io/en/latest/
+name: AcidFS
+packageUrl: https://pypi.org/project/acidfs
+sourceUrl: https://github.com/Pylons/acidfs
+websiteUrl: ''

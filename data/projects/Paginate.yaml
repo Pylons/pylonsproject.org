@@ -1,0 +1,8 @@
+description: Divides large result sets into pages for easier browsing.
+display_in_nav: false
+display_on_index: false
+docsUrl: ''
+name: Paginate
+packageUrl: https://pypi.org/project/paginate
+sourceUrl: https://github.com/Pylons/paginate
+websiteUrl: ''

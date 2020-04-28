@@ -1,0 +1,8 @@
+description: A library useful for framework authors to defer decorator actions.
+display_in_nav: false
+display_on_index: false
+docsUrl: http://docs.pylonsproject.org/projects/venusian/en/latest/
+name: Venusian
+packageUrl: https://pypi.org/project/venusian
+sourceUrl: https://github.com/Pylons/venusian
+websiteUrl: ''

@@ -1,0 +1,8 @@
+description: A library for converting a token stream into a data structure.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/peppercorn/en/latest/
+name: Peppercorn
+packageUrl: https://pypi.org/project/peppercorn
+sourceUrl: https://github.com/Pylons/peppercorn
+websiteUrl: ''

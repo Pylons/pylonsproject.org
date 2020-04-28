@@ -1,0 +1,40 @@
+{{ $items := sort $.Site.Data.projects "name" }}
+
+{{ if .Scratch.Get "display_on_index" }}
+{{ $items = where $items "display_on_index" true }}
+{{ end }}
+
+{{ if .Scratch.Get "display_in_nav" }}
+{{ $items = where $items "display_in_nav" true }}
+{{ end }}
+
+{{ if .Scratch.Get "exclude_deprecated" }}
+{{ $items = where $items "deprecated" "!=" true }}
+{{ end }}
+
+{{ if .Scratch.Get "only_deprecated" }}
+{{ $items = where $items "deprecated" true }}
+{{ end }}
+
+{{ range $items }}
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="project-item">
+    <h4>
+      {{ if .websiteUrl }}<a href="{{ .websiteUrl | safeURL }}">{{ end }}
+      {{ .name }}
+      {{ if .websiteUrl }}</a>{{ end }}
+    </h4>
+    <p class="project-description">{{ .description | safeHTML }}</p>
+    <p class="project-links">
+      <a href="{{ .packageUrl | safeURL }}">package</a>
+      • <a href="{{ .sourceUrl | safeURL }}">source</a>
+      {{ if .docsUrl }}
+      • <a href="{{ .docsUrl | safeURL }}">docs</a>
+      {{ end }}
+      {{ if .websiteUrl }}
+      • <a href="{{ .websiteUrl | safeURL }}">website</a>
+      {{ end }}
+    </p>
+  </div>
+</div>
+{{ end }}

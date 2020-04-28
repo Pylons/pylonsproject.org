@@ -1,0 +1,8 @@
+description: Serialization, deserialization and validation library.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/colander/en/latest/
+name: Colander
+packageUrl: https://pypi.org/project/colander
+sourceUrl: https://github.com/Pylons/colander
+websiteUrl: ''

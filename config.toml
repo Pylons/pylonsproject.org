@@ -1,0 +1,9 @@
+baseURL = "/"
+
+languageCode = "en-us"
+title = "Welcome to the Pylons Project"
+googleAnalytics = "UA-21146943-1"
+
+uglyurls = true
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]

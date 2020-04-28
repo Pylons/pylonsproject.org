@@ -1,0 +1,98 @@
+{{ define "main" }}
+
+<div class="page home">
+
+  <section class="hero-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="tagline">
+            <h1>
+              <span class="emphasis title">Pylons Project</span>
+            </h1>
+            <h2>
+              We build <span class="emphasis">Web Technologies</span><br>
+              for the <span class="emphasis">Python</span> community
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title text-blue">
+            Our <strong>Projects</strong>
+          </h1>
+        </div>
+      </div>
+      <div class="row project-items">
+        {{ .Scratch.Set "display_on_index" true }}
+        {{ partial "projects" . }}
+        {{ .Scratch.Delete "display_on_index" }}
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <a class="pull-right" href="projects.html" />More <strong>Projects</strong></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content section-pyramid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          &nbsp;
+        </div>
+        <div class="col-md-6">
+          <h1 class="title">Pyramid</h1>
+          <h2>
+            The Start <strong>Small</strong>,
+            Finish <strong>Big</strong><br>
+            Stay <strong>Finished</strong> Web Framework
+          </h2>
+          <p>
+            Visit <a href="https://trypyramid.com">trypyramid.com</a> to learn more about the Pyramid web framework, our most featured project.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title text-blue">
+            Pylons <strong>Project</strong>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            The <strong>Pylons Project</strong> is composed of a disparate group of project leaders with experience going back to the very start of <strong>Python web frameworks</strong>.
+          </p>
+          <p>
+            <strong>Collectively</strong>, we have experience and humility gained by making (and surviving) every stupid decision that could be imagined. We aim to bring <strong>fresh ideas</strong> to classic web development <strong>problems</strong>.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            Rather than focusing on a single web framework, the <strong>Pylons Project</strong> develops a <strong>collection</strong> of related technologies. The first package from the Pylons Project was the <a href="https://trypyramid.com">Pyramid</a> web framework.
+          </p>
+          <p>
+            Other packages have been added to the collection over time, including higher-level components and applications. The project has become an <strong>ecosystem</strong> of <strong>well-tested</strong>, <strong>well-documented</strong> components which <strong>interoperate</strong> easily.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{ end }}

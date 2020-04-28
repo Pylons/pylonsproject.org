@@ -1,0 +1,8 @@
+description: WSGI server for Python 2/3 that runs on UNIX and Windows.
+display_in_nav: false
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/waitress/en/latest/
+name: Waitress
+packageUrl: https://pypi.org/project/waitress
+sourceUrl: https://github.com/Pylons/waitress
+websiteUrl: ''

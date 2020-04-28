@@ -1,0 +1,82 @@
+{{ define "main" }}
+
+<div class="page">
+
+  <section class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+              <h1 class="title text-blue">How to Participate</h1>
+              <p>
+                Most interaction with projects under the Pylons Project is done via the <a href="https://groups.google.com/forum/#!forum/pylons-discuss">pylons-discuss mailing list</a>, the <a href="https://webchat.freenode.net/?channels=pyramid">#pyramid</a> IRC channel on FreeNode, Stack Overflow questions tagged with the project's name (such as <a href="https://stackoverflow.com/questions/tagged/pyramid">Pyramid</a> or
+                    <a href="https://stackoverflow.com/questions/tagged/webob">WebOb</a>) and the <a href="https://github.com/Pylons">Pylons organization on GitHub</a>.
+              </p>
+              <h3>Reporting a Bug</h3>
+              <p>
+                When reporting a bug, be as thorough as possible.  Including additional detail is encouraged.  Bugs with a Pylons Project package should be reported in its issue tracker on GitHub.
+              </p>
+              <span id="create-a-github-account" />
+              <h4>1. Create a GitHub account</h4>
+              <p>
+                You will need to <a href="https://github.com/join">create a GitHub account</a> to report the bug.
+              </p>
+              <span id="determine-if-your-bug-is-really-a-bug" />
+              <h4>2. Determine if your bug is really a bug</h4>
+              <p>You should not file a bug if you are:</p>
+              <ul>
+                <li>
+                  Proposing features or ideas. Instead you should provide a pull request or post to the <a href="https://groups.google.com/forum/#!forum/pylons-discuss">mailing list</a>.
+                </li>
+                <li>
+                  Requesting <a href="community-support.html">General Support</a>.
+                </li>
+              </ul>
+              <span id="make-sure-your-bug-hasn-t-already-been-reported" />
+              <h4>3. Make sure your bug hasn't already been reported</h4>
+              <p>
+                Before creating an issue, search through the appropriate Issue tracker on <a href="https://github.com/Pylons">GitHub</a>. If you find a bug like yours, and it hasn't yet been fixed, check to see if you have new information that could be reported to help the developers fix it.
+              </p>
+              <span id="collect-information-about-the-bug" />
+              <h4>4. Collect information about the bug</h4>
+              <p>
+                To provide the developers with enough information to fix a bug, they'll need to be able to easily repeat the conditions and observe it themselves. The likelihood that a bug will be fixed is directly correlated to the developer's ability to create the conditions under which the bug may be observed.
+              </p>
+              <p>
+                Often a bug report should include a Python traceback (<a href="http://pastebin.com/TyaPKpt9">see a Python traceback</a>). We will also need to know what platform you're running (Windows, macOS, Linux), and which Python interpreter you're running if it is not CPython (for example, Jython or Google App Engine).
+              </p>
+              <span id="submit-the-bug" />
+              <h4>5. Submit the bug</h4>
+              <p>
+                By default GitHub will email you to let you know when new comments have been made on your bug report. If you turned off this feature, you should check on occasion to ensure you do not miss any questions a developer might ask.
+              </p>
+              <span id="issue-trackers" />
+              <h3>Issue Trackers</h3>
+              <p>
+                Bugs for each Pylons Project package are reported and tracked in their own GitHub issue tracker:
+              </p>
+              <ul>
+                <li><a href="https://github.com/Pylons/pyramid/issues">Pyramid</a></li>
+                <li><a href="https://github.com/Pylons/waitress/issues">waitress</a></li>
+                <li><a href="https://github.com/Pylons/webob/issues">WebOb</a></li>
+                <li><a href="https://github.com/Pylons/colander/issues">colander</a></li>
+                <li><a href="https://github.com/Pylons/deform/issues">deform</a></li>
+                <li><a href="https://github.com/Pylons/webtest/issues">webtest</a></li>
+                <li><a href="https://github.com/Pylons/pylonsproject.org/issues">PylonsProject.org</a> (this website)
+                </li>
+              </ul>
+              <p>
+                Other projects not listed follow the pattern: <pre>https://github.com/Pylons/&lt;projectname&gt;/issues</pre>
+              </p>
+              <span id="working-on-code" />
+              <h3>Working on Code</h3>
+              <p>
+                To contribute new features and bug fixes, <a href="https://help.github.com/articles/fork-a-repo/">fork the package</a> and make changes within a checkout of the forked repository. Then send a <a href="https://help.github.com/articles/creating-a-pull-request/">pull request</a>. This allows the developers to review the patches and accept them, or comment on what needs to be addressed before the change sets can be accepted.
+              </p>
+            </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{ end }}

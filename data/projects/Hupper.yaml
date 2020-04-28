@@ -1,0 +1,8 @@
+description: A process monitor for developers that reloads process on file changes.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/hupper/en/latest/
+name: Hupper
+packageUrl: https://pypi.org/project/hupper
+sourceUrl: https://github.com/Pylons/hupper
+websiteUrl: ''
