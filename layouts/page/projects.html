@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div class="page">
+
+  <section class="section-projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title text-blue">
+            Our Projects
+          </h1>
+        </div>
+      </div>
+      <div class="row project-items">
+        {{ .Scratch.Set "exclude_deprecated" true }}
+        {{ partial "projects" . }}
+        {{ .Scratch.Delete "exclude_deprecated" }}
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title text-blue">
+            Deprecated / Maintenance Only
+          </h2>
+        </div>
+      </div>
+      <div class="row project-items">
+        {{ .Scratch.Set "only_deprecated" true }}
+        {{ partial "projects" . }}
+        {{ .Scratch.Delete "only_deprecated" }}
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{ end }}

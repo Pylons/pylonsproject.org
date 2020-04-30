@@ -1,0 +1,8 @@
+description: WSGI request/response library.
+display_in_nav: true
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/webob/en/latest/
+name: Webob
+packageUrl: https://pypi.org/project/webob
+sourceUrl: https://github.com/Pylons/webob
+websiteUrl: https://webob.org/

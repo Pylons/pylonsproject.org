@@ -1,0 +1,56 @@
+<nav id="nav" {{ with $.Params.needsTsNav }}class="index-transparent"{{ end }}>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img class="logo" alt="pylons project" src="img/pylons-60x60.png"/>
+        </a>
+        <div class="navbar-brand-name">
+          Pylons&nbsp;Project
+        </div>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav nav-pills pull-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="projects.html">Projects</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Community <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="community-support.html">Support</a></li>
+              <li><a href="community-how-to-participate.html">How to Participate</a></li>
+              <li><a href="community-how-to-contribute.html">How to Contribute</a></li>
+              <li><a href="community-coding-style-standards.html">Code Style / Standards</a></li>
+              <li><a href="community-unit-testing-guidelines.html">Testing Guidelines</a></li>
+              <li><a href="community-code-of-conduct.html">Code of Conduct</a></li>
+              <li><a href="community-sponsors.html">Sponsors</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              About <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="about-pylons-project.html">Pylons Project</a></li>
+              <li><a href="about-pylons-framework.html">Pylons Framework (deprecated)</a></li>
+              <li><a href="about-contact.html">Contact</a></li>
+              <li><a href="about-artwork.html">Artwork</a></li>
+              <li><a href="license.html">License</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

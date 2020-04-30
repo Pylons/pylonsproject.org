@@ -1,0 +1,9 @@
+deprecated: true
+description: WebError Error reporting and interactive debugger.
+display_in_nav: false
+display_on_index: false
+docsUrl: ''
+name: WebError
+packageUrl: https://pypi.org/project/WebError
+sourceUrl: https://github.com/Pylons/weberror
+websiteUrl: ''

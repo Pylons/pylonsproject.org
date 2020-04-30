@@ -1,0 +1,8 @@
+description: The Start Small, Finish Big, Stay Finished Web Framework.
+display_in_nav: true
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/pyramid/en/latest/
+name: Pyramid
+packageUrl: https://pypi.org/project/pyramid
+sourceUrl: https://github.com/Pylons/pyramid
+websiteUrl: https://trypyramid.com/

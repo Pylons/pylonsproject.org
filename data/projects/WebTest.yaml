@@ -1,0 +1,8 @@
+description: Test a WSGI application without starting up an HTTP server.
+display_in_nav: false
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/webtest/en/latest/
+name: WebTest
+packageUrl: https://pypi.org/project/WebTest
+sourceUrl: https://github.com/Pylons/webtest
+websiteUrl: ''

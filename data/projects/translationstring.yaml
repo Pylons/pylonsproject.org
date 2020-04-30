@@ -1,0 +1,8 @@
+description: An internationalization library.
+display_in_nav: false
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/translationstring/en/latest/
+name: translationstring
+packageUrl: https://pypi.org/project/translationstring
+sourceUrl: https://github.com/Pylons/translationstring
+websiteUrl: ''

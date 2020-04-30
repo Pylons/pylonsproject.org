@@ -1,6 +1,9 @@
-'use strict';
+// vendors
+require('./vendors');
 
+// assets
 require('./sass/app.scss');
+
 require('./img/pylons-60x60.png');
 require('./img/pylons-16x16.png');
 require('./img/linode.png');

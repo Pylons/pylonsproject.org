@@ -1,0 +1,8 @@
+description: An HTML form library.
+display_in_nav: false
+display_on_index: true
+docsUrl: https://docs.pylonsproject.org/projects/deform/en/latest/
+name: Deform
+packageUrl: https://pypi.org/project/deform
+sourceUrl: https://github.com/Pylons/deform
+websiteUrl: ''
