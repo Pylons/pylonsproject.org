@@ -10,7 +10,7 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        name: "Build the website"
+        name: "Build the pylonsproject.org website"
         steps:
             - uses: actions/checkout@master
             - name: Setup Node.js
@@ -50,6 +50,38 @@ jobs:
                   asset_name: website.zip
                   asset_content_type: application/zip
 
+    ghpages:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        needs: build
+        name: "Publish the website"
+        steps:
+            - name: Setup SSH keys and known_hosts
+              env:
+                  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+              run: |
+                  mkdir -p ~/.ssh
+                  chmod 0700 ~/.ssh
+                  ssh-keyscan github.com >> ~/.ssh/known_hosts
+                  ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+                  ssh-add - <<< "${{ secrets.DEPLOYKEY }}"
+            - name: Download the dist artifact
+              uses: actions/download-artifact@v1
+              with:
+                  name: built-dist
+            - name: Push these changes to the pages repository
+              env:
+                  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+              run: |
+                  cd built-dist
+                  git init .
+                  git config user.email "pylonsbot@pylonsproject.org"
+                  git config user.name "Pylonsbot"
+                  git add -A
+                  git commit -m "Publish the latest version of pylonsproject.org: $(date +'%Y-%m-%dT%H:%M')"
+                  git remote add origin git@github.com:Pylons/pylonsproject.org-pages.git
+                  git push -f origin HEAD:gh-pages
+
     audit:
         runs-on: ubuntu-latest
         name: "Audit the NPM packages"
@@ -59,6 +91,6 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: '13.x'
-            - run: npm install
-            - run: npm audit
+            - run: yarn install
+            - run: yarn audit
               continue-on-error: true
