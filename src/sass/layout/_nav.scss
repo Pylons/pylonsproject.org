@@ -23,7 +23,7 @@ nav#nav {
     }
     .navbar-inverse {
       .navbar-toggle {
-        &:hover {
+        &:hover, &:focus {
           background-color: darken($ppo-blue, 10%);
         }
       }
@@ -129,6 +129,9 @@ nav#nav {
       background-color: $white;
       color: $ppo-blue;
       opacity: 0.95;
+      .nav-pills > li {
+        float: none;
+      }
     }
     .navbar-inverse {
       .navbar-collapse {
@@ -146,6 +149,18 @@ nav#nav {
               background-color: darken($ppo-blue, 5%);
             }
           }
+          > li {
+            padding: 0 0.25em;
+          }
+        }
+      }
+      .navbar-toggle {
+        background-color: $ppo-blue;
+        &:hover, &:focus {
+          background-color: darken($ppo-blue, 10%);
+        }
+        .collapsed {
+          background-color: $ppo-blue;
         }
       }
     }
