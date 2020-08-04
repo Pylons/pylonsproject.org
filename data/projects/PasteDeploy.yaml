@@ -1,0 +1,8 @@
+description: A system for finding and configuring WSGI applications and servers.
+display_in_nav: false
+display_on_index: false
+docsUrl: https://docs.pylonsproject.org/projects/pastedeploy/en/latest/
+name: PasteDeploy
+packageUrl: https://pypi.org/project/PasteDeploy
+sourceUrl: https://github.com/Pylons/PasteDeploy
+websiteUrl: ''
