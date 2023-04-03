@@ -27,7 +27,7 @@
     "bootstrap-sass": "^3.3.6",
     "font-awesome": "^4.6.3",
     "highlight.js": "^10.4.1",
-    "jquery": "~3.4.1"
+    "jquery": "~3.6.4"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
